@@ -1,0 +1,23 @@
+<!--client/pages/doctororder/doctororder.wxml-->
+<view class='big'>
+  <view class='title'>
+    预约挂号
+  </view>
+  <view class="body">
+    <view class='nowtime'>
+        <view class="classfiy">
+           <text bindtap='dataorder'>按日期挂号</text>
+           <text class="now">按医生挂号</text>
+        </view>
+    </view>
+    <view class='doctor'>
+      <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf">
+        <image src="../../image/{{item.img}}"></image>
+        <view class='doctor-infname'>
+          <view class="infname">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

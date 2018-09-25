@@ -1,0 +1,76 @@
+<!--pages/main/main.wxml-->
+<view class="big">
+  <image src="../../image/main.jpg" class="header-img"></image>
+  <view class="main">
+    <view bindtap='appointment'>
+      <view class="left">
+      <image src="../../image/预约挂号.png" class="left-img"></image>
+        <view>预约挂号</view>
+      </view>
+    </view>
+    <view class="right">
+    <view class="right-one">
+      <image src="../../image/加号2.png" class="right-img"></image>   
+      <view class="right-inf">
+        <view class="right-title">了解我们</view>
+        <view class="right-content">查看医院简介</view>
+      </view>
+    </view>
+    <view class="right-two">
+      <image src="../../image/纸飞机.png" class="right-img"></image>
+      <view class="right-inf">
+        <view class="right-title">就医指南</view>
+        <view class="right-content">查看来源路线</view>
+      </view>   
+    </view>
+    </view>
+  </view>
+  <view class="doctor">
+    <view class="doctor-title">
+      <text class="doctor-title-left">本院医生</text>
+      <text class="doctor-title-right">更多></text>
+    </view>
+    <view class="doctor-inf">
+    <block wx:for="{{nameList}}" wx:key="id" >
+        <text class='no-name'>
+            {{item.name}}
+        </text>
+    </block>
+      <view class="doctor-inf-li" wx:for="{{doctorlist}}" wx:key="id">
+        <image src="../../image/{{item.img}}" ></image>
+        <view class='doctor-name'>{{item.name}}</view>
+        <view class='doctor-post'>{{item.post}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="article">
+    <view class="article-title">
+      <text class="article-title-left">今日文章</text>
+      <text class="article-title-right">更多></text>
+    </view>
+    <view class="article-main">
+      <view class="article-header">
+        <view class="article-main-title">{{articlelist.title}}</view>
+        <view class="article-main-writer">
+          <text>{{articlelist.writer}}</text>
+          <text>{{articlelist.lable}}</text>
+        </view>
+      </view>
+        <view class="article-main-content" style="overflow:{{isshow}};display:{{isdisplay}};height:{{isheight}};">{{articlelist.content}}
+        </view>
+        <view class='article-more' bindtap='showall'>{{howshow}}</view>
+        <view class="article-other">
+          <view class="article-visitnum">
+            <text>{{articlelist.visitcount}}</text>
+            <image src="../../image/上.png"></image>
+            <image src="../../image/下.png"></image>
+          </view>
+          <view>+</view>
+          <view>关注问题</view>
+          <image src='../../image/短信.png' class="comment"></image> 
+          <view> {{articlelist.commit}}条评论</view>
+        </view>
+    </view>
+  </view>
+  <view style="height:1rpx;"></view>
+</view>

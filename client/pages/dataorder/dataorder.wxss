@@ -1,0 +1,121 @@
+/* client/pages/dataorder/dataorder.wxss */
+.big{
+  margin:0;
+  padding:0;
+  background: #f2f2f2;
+}
+/*title开始*/
+.title{
+  background: #ffffff;
+  text-align: center;
+  height:100rpx;
+  font-size:36rpx;
+  font-weight: 500;
+  line-height: 100rpx;
+  margin-bottom:25rpx;
+}
+.body{
+  height: 300rpx;
+  background: #ffffff;
+}
+.nowtime{
+  /* background: #ffffff; */
+  padding:25rpx 0;
+  height:50rpx;
+  border-bottom:1px solid #bfbfbf;
+  position: relative;
+}
+.picker{
+  position:relative;
+  font-size:32rpx;
+  color:#898989;
+  padding:0 30rpx;
+  line-height: 50rpx;
+}
+.select{
+  height: 40rpx;
+  width: 40rpx;
+  position:absolute;
+  left:210rpx;
+  top:50%;
+  transform: translate(0,-50%);
+}
+.classfiy{
+  position:absolute;
+  height:56rpx;
+  border:1px solid #fed5d5;
+  font-size:30rpx;
+  right:30rpx;
+  top:22rpx;
+}
+.classfiy text{
+  line-height: 56rpx;
+  padding:10rpx;
+  background: #ffffff;
+  color:#fed5d5;
+}
+.classfiy .now{
+  background: #fed5d5;
+  color:#ffffff;
+}
+.time{
+  height: 200rpx;
+  border-bottom: 1rpx solid #bcbcbc;
+}
+.doctor{
+  margin-top:20rpx;
+  border-bottom:1rpx solid #bfbfbc;
+}
+.doctor-inf{
+  padding:10rpx 30rpx;
+  overflow: hidden;
+  position: relative;
+}
+.doctor-inf image{
+  height: 120rpx;
+  width: 120rpx;
+  /* overflow: hidden; */
+  /* float:left; */
+}
+.doctor-infname{
+  float:left;
+  height: 120rpx;
+  /* line-height: 150rpx; */
+  position:absolute;
+  top:50%;
+  left:180rpx;
+  transform: translate(0%,-50%);
+}
+.infname{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.infpost{
+  height: 75rpx;
+  line-height: 75rpx;
+  font-size:30rpx;
+}
+.docotr-but{
+  font-size:30rpx;
+  position:absolute;
+  right:30rpx;
+  top:50%;
+  transform: translate(0%,-50%);
+}
+.docotr-but text{
+  margin-left:20rpx;
+  color:#ffffff;
+  line-height: 56rpx;
+  padding:10rpx;
+  width:100rpx;
+  border-radius: 5px;
+}
+.doctor-num{
+  border:1rpx solid #fed5d5;
+  background: #fed5d5;
+}
+.doctor-money{
+  border:1rpx solid #ff9600;
+  background: #ff9600;
+}
+/*titile结束*/

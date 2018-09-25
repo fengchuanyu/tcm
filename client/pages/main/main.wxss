@@ -1,0 +1,216 @@
+/* pages/main/main.wxss */
+
+.big{
+  margin:0;
+  padding:0;
+  background: #f2f2f2;
+}
+.header-img{
+  height: 400rpx;
+  border-bottom: 1px solid #bbbbbb;
+}
+/* main开始 */
+.main{
+  height: 300rpx;
+  overflow: hidden;
+  border-bottom: 1px solid #bbbbbb;
+  background-color:#ffffff;
+  margin-top:-5rpx;
+}
+.main .left{
+  float:left;
+  width:50%;
+  border-right:1px solid #bbbbbb;
+  height: 100%;
+  text-align: center;
+}
+.main .left .left-img{
+  height:150rpx;
+  width:150rpx;
+  margin-top:30rpx;
+}
+.main .right{
+  float:right;
+  width:49%;
+  height: 100%;
+  overflow: hidden;
+}
+.main .right .right-one{
+  height: 50%;
+  border-bottom: 1px solid #bbbbbb;
+  position:relative;
+}
+.main .right .right-two{
+  height: 50%;
+  position:relative;
+}
+.right-inf{
+  float:right;
+  width: 50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(0%,-50%);
+}
+.right-img{
+  height: 100rpx;
+  width:100rpx;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-150%,-50%);
+}
+.right-title{
+  font-size:30rpx;
+}
+.right-content{
+  margin:5rpx 0;
+  font-size:20rpx;
+  color: #bbbbbb;
+}
+/* main结束 */
+
+/* doctor开始 */
+.doctor{
+  width: 100%;
+  margin:30rpx 0;
+  background-color: #ffffff;
+}
+.doctor-title{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom:1px solid #bbbbbb;
+  padding:0 30rpx;
+}
+.doctor-title-left{
+  float:left;
+  font-size:35rpx;
+}
+.doctor-title-right{
+  float:right;
+  font-size:35rpx;
+  color:#bbbbbb;
+}
+
+.doctor-inf{
+  padding: 40rpx 30rpx 25rpx 30rpx;
+  overflow: hidden;
+  /* height: 315rpx; */
+}
+.doctor-inf-li{
+  float:left;
+  margin-right:35rpx;
+  height: 315rpx;
+}
+.doctor-inf-li:last-child{
+  margin-right:0;
+}
+.doctor-inf-li image{
+  height: 210rpx;
+  width:210rpx;
+}
+.doctor-name{
+
+}
+.doctor-post{
+  color:#bbbbbb;
+  font-size:30rpx;
+  margin:10rpx 0;
+}
+/* doctor结束 */
+
+/* article开始 */
+.article{
+  width: 100%;
+  background-color: #ffffff;
+  margin:30rpx 0;
+}
+.article-title{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom:1px solid #bbbbbb;
+  padding:0 30rpx;
+}
+.article-title-left{
+  float:left;
+  font-size:35rpx;
+}
+.article-title-right{
+  float:right;
+  font-size:35rpx;
+  color:#bbbbbb;
+}
+.article-header{
+  margin:10rpx 0;
+}
+.article-main{
+  padding:10rpx 30rpx;
+  overflow: hidden;
+}
+.article-main-title{
+  color: #fed5d5;
+}
+.article-main-writer{
+  font-size:30rpx;
+  margin:10rpx 0;
+}
+.article-main-writer text{
+  padding-right:40rpx;
+}
+.article-main-content{
+  font-size:30rpx;
+  /* height: 220rpx; */
+  padding:10rpx 0;
+
+  /* overflow:hidden; */
+  text-overflow:ellipsis;
+  /* display:-webkit-box; */
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:6;
+}
+.article-other{
+  height: 40rpx;
+  overflow: hidden;
+  width: 100%;
+  margin:10rpx 0;
+  color:#7d7d7d;
+}
+.article-other view{
+  margin-right:15rpx;
+  font-size:30rpx;
+  float:left;
+}
+.article-more{
+  color:#fed5d5;
+  font-size: 30rpx;
+}
+.article-main .article-visitnum{
+  background-color: #ffeced;
+  color:#fed5d5;
+  font-size: 25rpx;
+  padding:5rpx 10rpx;
+  position:relative;
+  padding-right:30rpx;
+  box-sizing: border-box;
+}
+.article-visitnum image{
+  height: 20rpx;
+  width: 20rpx;
+  position: absolute;
+  display: block;
+  right:5rpx;
+}
+.article-visitnum image:nth-child(3){
+  top:20rpx;
+}
+.article-visitnum image:nth-child(2){
+  top:5rpx;
+}
+.comment{
+  height: 45rpx;
+  width: 45rpx;
+  float: left;
+  display: block;
+}
+
+/* article结束 */

@@ -1,0 +1,34 @@
+<view class='big'>
+  <view class='title'>
+    预约挂号
+  </view>
+  <view class="body">
+    <view class='nowtime'>
+      <picker mode="date" value="{{date}}" start="2018-06-05" end="2080-06-05" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+          <image src='../../image/向下.png' class="select"></image>
+        </view>
+       </picker>
+        <view class="classfiy">
+           <text class="now">按日期挂号</text>
+           <text bindtap='docotrorder'>按医生挂号</text>
+        </view>
+    </view>
+    <view class="time">
+    </view>
+    <view class='doctor'>
+      <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf">
+        <image src="../../image/{{item.img}}"></image>
+        <view class='doctor-infname'>
+          <view class="infname">{{item.name}}</view>
+          <view class="infpost">{{item.post}}</view>
+        </view>
+        <view class="docotr-but">
+          <text class="doctor-num">余号:20</text>
+          <text class='doctor-money'>￥23:00</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
