@@ -5,18 +5,6 @@
         <image class='searchImg' src='../../image/search.png'></image>
         <view class='searchBtn'>搜索</view>
     </view>
-    <!-- <view class='content'>
-        <view class='article' wx:for='{{infolist}}' wx:key="id" bindtap='toDetail' data-id='{{item.id}}'>
-           <view class='title'>{{item.title}}</view>
-           <view>
-              <view class='writer'>{{item.writer}}</view>
-              <view class='label'>{{item.label}}</view>
-           </view>
-           <view class='detial'>{{item.content}}
-              <view class='btn'>显示全部</view>
-           </view> 
-        </view> 
-    </view> -->
     <view wx:for="{{infolist}}" wx:key="id" class="info-inf" bindtap='toDetail' data-id='{{item.id}}'>
       <view class="article">
         <view class="article-main">
@@ -33,12 +21,12 @@
           <view class="article-other">
               <view class="article-visitnum">
                 <text>{{item.visitcount}}</text>
-                <image src="../../image/上.png"></image>
-                <image src="../../image/下.png"></image>
+                <image src="../../image/up.png"></image>
+                <image src="../../image/downs.png"></image>
               </view>
               <view>+</view>
               <view>关注问题</view>
-              <image src='../../image/短信.png' class="comment"></image> 
+              <image src='../../image/duanxin.png' class="comment"></image> 
               <view> {{item.commit}}条评论</view>
           </view>
         </view>

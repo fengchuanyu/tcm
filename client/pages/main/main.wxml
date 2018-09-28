@@ -4,20 +4,20 @@
   <view class="main">
     <view bindtap='appointment'>
       <view class="left">
-      <image src="../../image/预约挂号.png" class="left-img"></image>
+      <image src="../../image/yuyue.png" class="left-img"></image>
         <view>预约挂号</view>
       </view>
     </view>
     <view class="right">
     <view class="right-one" bindtap='brif'>
-      <image src="../../image/加号2.png" class="right-img"></image>   
+      <image src="../../image/jia2.png" class="right-img"></image>   
       <view class="right-inf">
         <view class="right-title">了解我们</view>
         <view class="right-content">查看医院简介</view>
       </view>
     </view>
     <view class="right-two" bindtap='map'>
-      <image src="../../image/纸飞机.png" class="right-img"></image>
+      <image src="../../image/plane.png" class="right-img"></image>
       <view class="right-inf">
         <view class="right-title">就医指南</view>
         <view class="right-content">查看来源路线</view>
@@ -62,12 +62,12 @@
         <view class="article-other">
           <view class="article-visitnum">
             <text>{{articlelist.visitcount}}</text>
-            <image src="../../image/上.png"></image>
-            <image src="../../image/下.png"></image>
+            <image src="../../image/up.png"></image>
+            <image src="../../image/downs.png"></image>
           </view>
           <view>+</view>
           <view>关注问题</view>
-          <image src='../../image/短信.png' class="comment"></image> 
+          <image src='../../image/duanxin.png' class="comment"></image> 
           <view> {{articlelist.commit}}条评论</view>
         </view>
     </view>

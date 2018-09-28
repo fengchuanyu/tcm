@@ -22,14 +22,14 @@
           <text class='doctor-money'>￥23:00</text>
         </view>
       </view>
-      <view class="orderinf">
+      <view class="orderinf" bindtap='registered' data-id='{{newid}}'>
         <view>2018-09-09</view>
         <view class="docotr-but">
           <text class="doctor-num">余号:20</text>
           <text class='doctor-money'>￥23:00</text>
         </view>
       </view>
-      <view class="orderinf">
+      <view class="orderinf" bindtap='registered' data-id='{{newid}}'>
         <view>2018-09-09</view>
         <view class="docotr-but">
           <text class="doctor-num">余号:20</text>

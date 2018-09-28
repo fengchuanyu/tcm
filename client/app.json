@@ -42,26 +42,26 @@
       {
         "pagePath": "pages/main/main",
         "text": "首页",
-        "iconPath": "image/首页s.png",
-        "selectedIconPath": "image/首页.png"
+        "iconPath": "image/mains.png",
+        "selectedIconPath": "image/main.png"
       },
       {
         "pagePath": "pages/illness/illness",
         "text": "病种分类",
-        "iconPath": "image/分类s.png",
-        "selectedIconPath": "image/分类.png"
+        "iconPath": "image/classs.png",
+        "selectedIconPath": "image/class.png"
       },
       {
         "pagePath": "pages/health/health",
         "text": "养生保健",
-        "iconPath": "image/西药s.png",
-        "selectedIconPath": "image/西药.png"
+        "iconPath": "image/xiyaos.png",
+        "selectedIconPath": "image/xiyao.png"
       },
       {
         "pagePath": "pages/my/my",
         "text": "我的",
-        "iconPath": "image/我的s.png",
-        "selectedIconPath": "image/我的.png"
+        "iconPath": "image/mys.png",
+        "selectedIconPath": "image/my.png"
       }
     ]
   }

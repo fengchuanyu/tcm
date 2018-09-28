@@ -35,17 +35,23 @@
 }
 .classfiy{
   position:absolute;
-  height:56rpx;
   border:1px solid #fed5d5;
   font-size:30rpx;
   right:30rpx;
-  top:32rpx;
+  width:325rpx;
+  top:22rpx;
+  margin:0;
+  overflow: hidden;
+  height: 56rpx;
 }
 .classfiy text{
   line-height: 56rpx;
-  padding:10rpx;
+  display: block;
+  height: 56rpx;
+  padding:0 10rpx;
   background: #ffffff;
   color:#fed5d5;
+  float:left;
 }
 .classfiy .now{
   background: #fed5d5;

@@ -8,25 +8,26 @@
 .header-img{
   height: 400rpx;
   border-bottom: 1px solid #f8f8f8;
+  width:100%;
 }
 /* main开始 */
 .main{
   height: 300rpx;
   overflow: hidden;
   background-color:#ffffff;
-  margin-top:-5rpx;
+  margin-top:-10rpx;
 }
 .main .left{
   float:left;
   width:50%;
-  
-  height: 100%;
+  /* height: 100%; */
   text-align: center;
+  overflow: hidden;
 }
 .main .left .left-img{
   height:150rpx;
   width:150rpx;
-  margin-top:30rpx;
+  margin-top:50rpx;
 }
 .main .right{
   float:right;
