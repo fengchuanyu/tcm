@@ -1,0 +1,75 @@
+/* pages/my_information/my_information.wxss */
+.info{
+  height:100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx #f8f8f8 solid;
+  margin: 0rpx 30rpx;
+}
+.btn{
+  height:100rpx;
+   width: 600rpx;
+   background: #fed5d5;
+   margin: 150rpx 0rpx;
+   text-align: center;
+   line-height: 100rpx;
+   position: relative;
+   left: 50%;
+   right: 50%;
+   transform: translateX(-50%);
+   color: white;
+}
+.info input{
+  position: relative;
+  top: 15rpx;
+}
+
+
+.phone_personal{
+    width: 60%;
+    position: absolute;
+    top: -400rpx;
+    left: 40%;
+    height:100rpx;
+    line-height:100rpx;
+    text-align: center;
+}
+.phone_one{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    background-color:white;
+    width:60%;
+    margin: 300rpx;
+    height:100rpx;
+    border-radius: 10rpx;
+}
+.person_box{
+    position: relative;
+}
+.phone_select{
+    margin-top:0;
+    z-index: 100;
+    position: absolute; 
+}
+.select_one{
+    width:60%;   
+    height:100rpx;
+    padding-left: 548rpx;
+    line-height:100rpx;
+    margin:0 5%;
+    margin-top: -200rpx;
+}
+.personal_image{
+    z-index: 100;
+    position: absolute;
+    left: 330rpx;
+    top: -410rpx;
+    width: 50rpx;
+    height: 50rpx;
+    margin:40rpx 20rpx 40rpx 0;
+    transition: All 0.4s ease;  
+    -webkit-transition: All 0.4s ease;
+}
+.rotateRight{
+    transform: rotate(180deg); 
+}

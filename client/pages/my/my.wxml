@@ -1,0 +1,16 @@
+<view class="total">
+  <view class="title">
+    <view wx:if="{{postData}}" class="user-inf">
+        <image src="../../image/{{doctorlist[0].img}}"></image>
+        <view class='user-infname'>
+          <view class="infname">{{doctorlist[0].name}}</view>
+          <view class="infpost">微信号：{{doctorlist[0].post}}</view>
+        </view>
+    </view>
+  </view>
+  <view class="body">
+    <view class="body_one" bindtap='yuyue'>预约挂号</view>
+    <view class="body_two"  bindtap='inf'>我的信息</view>
+    <view class="body_three"  bindtap='store'>我的收藏</view>
+  </view>
+</view>

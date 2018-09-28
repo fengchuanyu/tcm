@@ -1,16 +1,34 @@
 {
   "pages": [
-    "pages/doctororder/doctororder",
+    
     "pages/main/main",
+    "pages/my_yuyue/my_yuyue",
+    "pages/my_store/my_store",
+    "pages/my/my",
+    "pages/my_information/my_information",
+
     "pages/dataorder/dataorder",
+    "pages/regtrue/regtrue",
+    "pages/registered/registered",
+    "pages/introduces/introduces",
+    "pages/introduce/introduce",
+    "pages/doctororder/doctororder",
+
+    "pages/illness/illness",
+    "pages/illdetail/illdetail",
+    "pages/map/map",
+    "pages/brif/brif",
+    "pages/localdoc/localdoc",
+    "pages/health/health",
+    "pages/hdetail/hdetail",
+
     "pages/index/index",
     "pages/addCgi/addCgi"
-    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "Wafer Quick Start",
     "navigationBarTextStyle": "black"
   },
@@ -28,19 +46,19 @@
         "selectedIconPath": "image/首页.png"
       },
       {
-        "pagePath": "pages/main/main",
+        "pagePath": "pages/illness/illness",
         "text": "病种分类",
         "iconPath": "image/分类s.png",
         "selectedIconPath": "image/分类.png"
       },
       {
-        "pagePath": "pages/main/main",
+        "pagePath": "pages/health/health",
         "text": "养生保健",
         "iconPath": "image/西药s.png",
-        "selectedIconPath": "image/西药s.png"
+        "selectedIconPath": "image/西药.png"
       },
       {
-        "pagePath": "pages/main/main",
+        "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "image/我的s.png",
         "selectedIconPath": "image/我的.png"

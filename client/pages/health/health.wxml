@@ -1,0 +1,47 @@
+<!--pages/health/health.wxml-->
+<scroll-view class='wrap'>
+    <view class='searchBar'>
+        <input class='searchContent'></input>
+        <image class='searchImg' src='../../image/search.png'></image>
+        <view class='searchBtn'>搜索</view>
+    </view>
+    <!-- <view class='content'>
+        <view class='article' wx:for='{{infolist}}' wx:key="id" bindtap='toDetail' data-id='{{item.id}}'>
+           <view class='title'>{{item.title}}</view>
+           <view>
+              <view class='writer'>{{item.writer}}</view>
+              <view class='label'>{{item.label}}</view>
+           </view>
+           <view class='detial'>{{item.content}}
+              <view class='btn'>显示全部</view>
+           </view> 
+        </view> 
+    </view> -->
+    <view wx:for="{{infolist}}" wx:key="id" class="info-inf" bindtap='toDetail' data-id='{{item.id}}'>
+      <view class="article">
+        <view class="article-main">
+          <view class="article-header">
+            <view class="article-main-title">{{item.title}}</view>
+            <view class="article-main-writer">
+              <text>{{item.writer}}</text>
+              <text>{{item.lable}}</text>
+            </view>
+          </view>
+          <view class="article-main-content" style="overflow:{{isshow}};display:{{isdisplay}};height:{{isheight}};">{{item.content}}
+          </view>
+          <view class='article-more' bindtap='showall'>{{howshow}}</view>
+          <view class="article-other">
+              <view class="article-visitnum">
+                <text>{{item.visitcount}}</text>
+                <image src="../../image/上.png"></image>
+                <image src="../../image/下.png"></image>
+              </view>
+              <view>+</view>
+              <view>关注问题</view>
+              <image src='../../image/短信.png' class="comment"></image> 
+              <view> {{item.commit}}条评论</view>
+          </view>
+        </view>
+    </view>
+    </view>
+</scroll-view>

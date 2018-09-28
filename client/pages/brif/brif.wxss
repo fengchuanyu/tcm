@@ -1,0 +1,22 @@
+/* pages/brif/brif.wxss */
+
+.wrap{
+ margin: 20rpx;
+
+}
+.title{
+ text-align: center;
+ display: block;
+ font-size: 50rpx;
+ color:#fed5d5;
+}
+.content{
+  padding:0 20rpx;
+  display: block;
+}
+.phase{
+  display:block;
+  font-size: 30rpx;
+  text-indent: 27rpx;
+  text-align: justify;
+}

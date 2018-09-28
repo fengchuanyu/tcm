@@ -1,0 +1,33 @@
+<!--pages/my_store/my_store.wxml-->
+<view>
+<view class='info_one'>
+  <view wx:for="{{infolist}}" wx:key="id" class="info-inf" bindtap='hdetail' data-id='{{item.id}}'>
+    <view class="article" >
+      <view class="article-main">
+        <view class="article-header">
+          <view class="article-main-title">{{item.title}}</view>
+          <view class="article-main-writer">
+            <text>{{item.writer}}</text>
+            <text>{{item.lable}}</text>
+          </view>
+        </view>
+        <view class="article-main-content" style="overflow:{{isshow}};display:{{isdisplay}};height:{{isheight}};">{{item.content}}
+        </view>
+        <view class='article-more' bindtap='showall'>{{howshow}}</view>
+        <view class="article-other">
+            <view class="article-visitnum">
+              <text>{{item.visitcount}}</text>
+              <image src="../../image/上.png"></image>
+              <image src="../../image/下.png"></image>
+            </view>
+            <view>+</view>
+            <view>关注问题</view>
+            <image src='../../image/短信.png' class="comment"></image> 
+            <view> {{item.commit}}条评论</view>
+        </view>
+      </view>
+  </view>
+  <view style="height:1rpx;"></view>
+  </view>
+  </view>
+</view>

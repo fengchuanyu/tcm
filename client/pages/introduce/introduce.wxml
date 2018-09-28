@@ -1,0 +1,41 @@
+<!--client/pages/introduce/introduce.wxml-->
+<view class='big'>
+  <view class="body">
+    <view class='doctor-big'>
+      <view class="doctor-inf">
+        <image src='../../image/doctor.jpg'></image>
+        <view class='doctor-infname'>
+          <view class="infname">{{detail.name}}</view>
+          <view class="infpost">{{detail.post}}</view>
+        </view>
+      </view>
+      <view class='classfiy'>
+        <view class=''><text class='spe'>挂号</text></view>
+        <view><text bindtap='introduces' data-id='{{newid}}'>介绍</text></view>
+      </view>
+    </view>
+    <view class='orderinfs'>
+      <view class="orderinf" bindtap='registered' data-id='{{newid}}'>
+        <view>2018-09-09</view>
+        <view class="docotr-but">
+          <text class="doctor-num">余号:20</text>
+          <text class='doctor-money'>￥23:00</text>
+        </view>
+      </view>
+      <view class="orderinf">
+        <view>2018-09-09</view>
+        <view class="docotr-but">
+          <text class="doctor-num">余号:20</text>
+          <text class='doctor-money'>￥23:00</text>
+        </view>
+      </view>
+      <view class="orderinf">
+        <view>2018-09-09</view>
+        <view class="docotr-but">
+          <text class="doctor-num">余号:20</text>
+          <text class='doctor-money'>￥23:00</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -45,18 +45,44 @@ Component({
         })
       }
     },
+    doctor:function(event){
+      var newid = event.currentTarget.dataset.id;
+      wx.navigateTo({
+        url: '../introduces/introduces?id=' + newid
+      })
+    },
+    health: function () {
+      wx.switchTab({
+        url: '../health/health'
+      })
+    },
+    map: function () {
+      wx.navigateTo({
+        url: '../map/map'
+      })
+    },
+    brif:function(){
+      wx.navigateTo({
+        url: '../brif/brif'
+      })
+    },
+    localdoc:function(){
+      wx.navigateTo({
+        url: '../localdoc/localdoc'
+      })
+    },
     appointment:function(){
        wx.navigateTo({
          url: '../dataorder/dataorder'
       })
     },
     onLoad: function () {
-      console.log('onLoad')
+      // console.log('onLoad')
       var that = this
       // 使用 Mock
       API.ajax('', function (res) {
         //这里既可以获取模拟的res
-        console.log(res)
+        // console.log(res)
         that.setData({
           doctorlist: res.data['doctordata'].slice(0, 3),
           articlelist:res.data['articledata'][0]
@@ -64,7 +90,7 @@ Component({
       });
 
       // console.log(this.data.doctorlist)
-      console.log(this.data.articlelist)
+      // console.log(this.data.articlelist)
     }
   }
 })

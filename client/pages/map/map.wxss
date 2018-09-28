@@ -1,0 +1,19 @@
+.detail{
+  padding: 0 30rpx;
+}
+.phase{
+  border-width: 1rpx;
+  border-style:solid;
+  border-color:#dddddd transparent transparent transparent;
+  padding:30rpx 0;
+}
+.title{
+  font-size: 50rpx;
+  text-align: center;
+  padding-bottom: 20rpx;
+  color:#fed5d5;
+}
+.content{
+  font-size: 32rpx;
+  line-height: 1.5;
+}

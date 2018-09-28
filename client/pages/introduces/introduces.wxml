@@ -1,0 +1,27 @@
+<view class='big'>
+  <view class="body">
+    <view class='doctor-big'>
+      <view class="doctor-inf">
+        <image src='../../image/doctor.jpg'></image>
+        <view class='doctor-infname'>
+          <view class="infname">{{detail.name}}</view>
+          <view class="infpost">{{detail.post}}</view>
+        </view>
+      </view>
+      <view class='classfiy'>
+        <view class=''><text bindtap='introduce' data-id='{{newid}}'>挂号</text></view>
+        <view><text class='spe'>介绍</text></view>
+      </view>
+    </view>
+    <view class='orderinfs'>
+      <view class='expert'>
+        擅长
+        <view class='inf'>暂无相关信息</view>
+      </view>
+      <view class='introduces'>
+        介绍
+        <view class='inf'>暂无相关信息</view>
+      </view>
+    </view>
+  </view>
+</view>

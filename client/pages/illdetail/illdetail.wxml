@@ -1,0 +1,9 @@
+<!--pages/illdetail/illdetail.wxml-->
+<scroll-view>
+    <view class='content'>
+        <view class='phaseFir'>{{details.contentOne}}</view>
+        <view class='phaseSec'>{{details.contentSec}}</view>
+    </view>
+   <navigator url="../dataorder/dataorder" class='btn'>挂号就诊</navigator>
+
+</scroll-view>

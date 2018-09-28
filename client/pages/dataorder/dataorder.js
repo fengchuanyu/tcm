@@ -7,11 +7,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    date: "2018-07-08"
+    
   },
   docotrorder:function(){
     wx.navigateTo({
       url: '../doctororder/doctororder'
+      
+    })
+  },
+  introduce: function (event) {
+    var newid = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../introduce/introduce?id='+newid
     })
   },
   bindDateChange: function (e) {
@@ -27,17 +34,52 @@ Page({
     var nowdate = new Date();
     var nowyear = nowdate.getFullYear();
     var nowmonth = nowdate.getMonth()+1;
-    var nowday = nowdate.getDate();
-    console.log(nowdate);
-    console.log(nowyear,nowmonth,nowday);
+    var nowdate = nowdate.getDate();
+    var nowday = new Date().getDay();
+    // var nowyear = 2000;
+    // var nowmonth = 3;
+    // var nowdate = 2;
+    // var nowday = 4;
+    var now = nowdate - (nowday - 1);
+    var colorlist = ['#000000', '#000000', '#000000', '#000000', '#000000', '#000000', '#000000'];
+    var bglist = ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'];
+    var date = [now, now + 1, now + 2, now + 3, now + 4, now + 5, now + 6];
+    var show = [true,true,true,true,true,true,true];
+    var monthday = [31,28,31,30,31,30,31,31,30,31,30,31];
+    if(nowyear%400 == 0 ||(nowyear%4 == 0 && nowyear%100 != 0)){
+      monthday[2] = 29;
+    }
+    if(nowday > nowdate){
+      for(var i = 0 ; i < 8 ; i++){
+        if(date[i]<1){
+          date[i] += monthday[nowmonth-1];
+        }
+      }
+    }
+    bglist[nowday - 1] = '#fed5d5';
+    colorlist[nowday-1] = '#ffffff';
+    for(var i = 0 ; i < 8 ; i++){
+      if(i<nowday-1){
+        show[i] = false;
+        colorlist[i] = '#bcbcbc';
+      }
+    }
+    
     this.setData({
-      date: nowyear+'-'+nowmonth+'-'+nowday
+      datelist:date,
+      color:colorlist,
+      bg:bglist,
+      isshow:show
     })
-    var that = this
+    var week = nowdate.g
+    this.setData({
+      date: nowyear+'-'+nowmonth+'-'+nowdate
+    })
+    var that = this;
     // 使用 Mock
     API.ajax('', function (res) {
       //这里既可以获取模拟的res
-      console.log(res)
+      // console.log(res)
       that.setData({
         doctorlist: res.data['doctordata']
       })

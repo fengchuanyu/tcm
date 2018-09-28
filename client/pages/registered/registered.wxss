@@ -1,0 +1,57 @@
+/* client/pages/registered/registered.wxss */
+.big{
+  margin:0;
+  padding:0;
+  background: #f2f2f2;
+  padding-top: 20rpx;
+  font-size:35rpx;
+}
+
+/*body开始*/
+.reg-inf{
+  padding:0 30rpx;
+  background: #ffffff;
+  margin-bottom:30rpx;
+  
+}
+.inf{
+  height: 100rpx;
+  border-bottom:1rpx solid #f8f8f8;
+  line-height: 100rpx;
+}
+.inf text{
+  float:right;
+  color:#bcbcbc;
+}
+.time text{
+  color:#ff9600;
+  margin-left:10rpx;
+}
+.money{
+  background: #ffffff;
+  padding:0 30rpx;
+  height: 100rpx;
+  /* border-bottom:1rpx solid #f8f8f8; */
+  line-height: 100rpx;
+  margin-bottom:30rpx;
+}
+.money text{
+  float:right;
+  color:#bcbcbc;
+}
+.true{
+  background: #ffffff;
+}
+.true view{
+  position:relative;
+  top:80rpx;
+  left:50%;
+  transform: translate(-50%);
+  height: 80rpx;
+  width:600rpx;
+  background: #fed5d5;
+  color:#ffffff;
+  line-height: 80rpx;
+  text-align: center;
+}
+/*body结束*/

@@ -1,0 +1,26 @@
+/* client/pages/illness/illness.wxss */
+.wrap{
+  width: 750rpx;
+}
+.title{
+  margin-bottom:25rpx;
+  text-align: center;
+}
+.content{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.illness{
+  font-size:32rpx;
+  display:inline-block;
+  width:32%;
+  height:250rpx;
+  line-height: 250rpx;
+  flex-grow: 1;
+  border-style: solid;
+  border-color:transparent #bbbbbb #bbbbbb transparent;
+  border-width:1rpx;
+  text-align: center;
+}
+

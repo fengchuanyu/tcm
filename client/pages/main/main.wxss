@@ -7,20 +7,19 @@
 }
 .header-img{
   height: 400rpx;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid #f8f8f8;
 }
 /* main开始 */
 .main{
   height: 300rpx;
   overflow: hidden;
-  border-bottom: 1px solid #bbbbbb;
   background-color:#ffffff;
   margin-top:-5rpx;
 }
 .main .left{
   float:left;
   width:50%;
-  border-right:1px solid #bbbbbb;
+  
   height: 100%;
   text-align: center;
 }
@@ -31,13 +30,13 @@
 }
 .main .right{
   float:right;
+  border-left:1px solid #f8f8f8;
   width:49%;
   height: 100%;
   overflow: hidden;
 }
 .main .right .right-one{
   height: 50%;
-  border-bottom: 1px solid #bbbbbb;
   position:relative;
 }
 .main .right .right-two{
@@ -73,13 +72,13 @@
 /* doctor开始 */
 .doctor{
   width: 100%;
-  margin:30rpx 0;
+  margin:20rpx 0;
   background-color: #ffffff;
 }
 .doctor-title{
   height: 80rpx;
   line-height: 80rpx;
-  border-bottom:1px solid #bbbbbb;
+  border-bottom:1px solid #f8f8f8;
   padding:0 30rpx;
 }
 .doctor-title-left{
@@ -95,7 +94,6 @@
 .doctor-inf{
   padding: 40rpx 30rpx 25rpx 30rpx;
   overflow: hidden;
-  /* height: 315rpx; */
 }
 .doctor-inf-li{
   float:left;
@@ -110,7 +108,8 @@
   width:210rpx;
 }
 .doctor-name{
-
+  font-size:35rpx;
+  margin:10rpx 0;
 }
 .doctor-post{
   color:#bbbbbb;
@@ -123,12 +122,12 @@
 .article{
   width: 100%;
   background-color: #ffffff;
-  margin:30rpx 0;
+  margin:20rpx 0;
 }
 .article-title{
   height: 80rpx;
   line-height: 80rpx;
-  border-bottom:1px solid #bbbbbb;
+  border-bottom:1px solid #fbfbfb;
   padding:0 30rpx;
 }
 .article-title-left{

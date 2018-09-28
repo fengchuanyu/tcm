@@ -3,26 +3,19 @@
   margin:0;
   padding:0;
   background: #f2f2f2;
+  padding-top:20rpx;
 }
-/*title开始*/
-.title{
-  background: #ffffff;
-  text-align: center;
-  height:100rpx;
-  font-size:36rpx;
-  font-weight: 500;
-  line-height: 100rpx;
-  margin-bottom:25rpx;
-}
+/*body开始*/
 .body{
   height: 300rpx;
   background: #ffffff;
 }
+/*日期开始*/
 .nowtime{
   /* background: #ffffff; */
   padding:25rpx 0;
-  height:50rpx;
-  border-bottom:1px solid #bfbfbf;
+  height:70rpx;
+  border-bottom:1px solid #f8f8f8;
   position: relative;
 }
 .picker{
@@ -46,7 +39,7 @@
   border:1px solid #fed5d5;
   font-size:30rpx;
   right:30rpx;
-  top:22rpx;
+  top:32rpx;
 }
 .classfiy text{
   line-height: 56rpx;
@@ -58,16 +51,17 @@
   background: #fed5d5;
   color:#ffffff;
 }
+/*日期结束*/
 
+/*医生开始*/
 .doctor{
   margin-top:20rpx;
-  /* border-bottom:1rpx solid #bfbfbc; */
 }
 .doctor-inf{
   margin:10rpx 30rpx;
   overflow: hidden;
   position: relative;
-  border-bottom:1rpx solid #b4b4b4;
+  border-bottom:1rpx solid #f8f8f8;
 }
 .doctor-inf image{
   height: 120rpx;
@@ -77,16 +71,16 @@
 .doctor-infname{
   float:left;
   height: 120rpx;
-  /* line-height: 150rpx; */
+  font-size:35rpx;
   position:absolute;
   top:50%;
-  left:180rpx;
+  left:160rpx;
   transform: translate(0%,-50%);
 }
 .infname{
   height: 120rpx;
   line-height: 120rpx;
 }
+/*医生结束*/
+/*body结束*/
 
-
-/*titile结束*/

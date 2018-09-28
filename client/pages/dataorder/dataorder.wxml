@@ -1,24 +1,33 @@
 <view class='big'>
-  <view class='title'>
-    预约挂号
-  </view>
   <view class="body">
     <view class='nowtime'>
-      <picker mode="date" value="{{date}}" start="2018-06-05" end="2080-06-05" bindchange="bindDateChange">
-        <view class="picker">
-          {{date}}
-          <image src='../../image/向下.png' class="select"></image>
-        </view>
-       </picker>
-        <view class="classfiy">
-           <text class="now">按日期挂号</text>
-           <text bindtap='docotrorder'>按医生挂号</text>
-        </view>
-    </view>
+      <view class='picker'>
+        {{date}}
+      </view>
+      <view class="classfiy">
+        <text class="now">按日期挂号</text>
+        <text bindtap='docotrorder'>按医生挂号</text>
+      </view>
+    </view> 
     <view class="time">
+      <view class='weeks'>
+        <view class='week'>一</view>
+        <view class='week'>二</view>
+        <view class='week'>三</view>
+        <view class='week'>四</view>
+        <view class='week'>五</view>
+        <view class='week'>六</view>
+        <view class='week'>日</view>
+      </view>
+      <view class='date'>
+        <view class='week-date' wx:for="{{datelist}}" wx:key="id" style='color:{{color[index]}};background:{{bg[index]}}'>
+          <view>{{item}}</view>
+          <view wx-if='{{isshow[index]}}'>出诊</view>
+        </view>
+      </view>
     </view>
     <view class='doctor'>
-      <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf">
+      <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf" bindtap="introduce" data-id='{{item.id}}'>
         <image src="../../image/{{item.img}}"></image>
         <view class='doctor-infname'>
           <view class="infname">{{item.name}}</view>

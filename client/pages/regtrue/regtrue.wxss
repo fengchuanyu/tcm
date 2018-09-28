@@ -1,0 +1,23 @@
+/* client/pages/regtrue/regtrue.wxss */
+.big{
+  margin:0;
+  padding:0;
+  background: #f2f2f2;
+  padding-top:20rpx;
+}
+
+.body{
+  background: #ffffff;
+  /* margin-top:30rpx; */
+  text-align: center;
+  padding-top:30rpx;
+}
+.body image{
+  margin-top:150rpx;
+  margin-bottom:20rpx;
+  height: 120rpx;
+  width: 120rpx;
+}
+.body view{
+  font-size:25rpx;
+}

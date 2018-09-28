@@ -1,0 +1,32 @@
+<!--pages/my_information/my_information.wxml-->
+<view>
+    <view>
+            <view class="info">
+                <text space='ensp'>姓名  </text><input type="text" style='display:inline-block' ></input>
+            </view>
+            <view class="section info">  
+  <picker mode="date" value="{{date}}" start="2016-09-26" end="2017-10-10" bindchange="listenerDatePickerSelected">
+    <text space='ensp'>出生日期  {{date}}</text>
+</picker>
+</view> 
+     <view class="info">
+                性别
+                <view>
+                <view class="phone_select" hidden="{{selectPerson}}">
+    <view class="select_one" bindtap="mySelect" data-me="男">男</view>
+    <view class="select_one" bindtap="mySelect" data-me="女">女</view>
+  </view>
+  <view class="phone_one" bindtap="clickPerson">
+  <view class="phone_personal">{{firstPerson}}</view>
+  <image src="../../image/down.png" class="personal_image {{selectArea ? 'rotateRight' :''}}"></image> </view>
+  </view>
+            </view>
+             <view class="info">
+                <text space='ensp'>电话号码  </text><input type="text" style='display:inline-block' ></input>
+            </view>
+             <view class="info">
+                <text space='ensp'>身份证号  </text><input type="text" style='display:inline-block' ></input>
+            </view>
+    </view>
+    <view><button class='btn'>确定</button></view>
+</view>

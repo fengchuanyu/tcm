@@ -1,0 +1,83 @@
+/* client/pages/introduces/introduces.wxss */
+
+.big{
+  margin:0;
+  padding:0;
+  background: #f2f2f2;
+  padding-top: 20rpx;
+}
+
+/*body开始*/
+.doctor-big{
+  background: #ffffff;
+}
+.doctor-inf{
+  margin:0 30rpx;
+  overflow: hidden;
+  padding:30rpx 0;
+  position: relative;
+}
+.doctor-inf image{
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 10rpx;
+}
+.doctor-infname{
+  float:left;
+  height: 100rpx;
+  position:absolute;
+  top:50%;
+  left:150rpx;
+  transform: translate(0%,-50%);
+}
+.infname{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.infpost{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size:30rpx;
+}
+
+.classfiy{
+  padding:20rpx 30rpx 2rpx 30rpx;
+  overflow: hidden;
+}
+.classfiy view{
+  padding-bottom:30rpx;
+  text-align: center;
+  
+}
+.classfiy view:first-child{
+  margin-left:150rpx;
+  float:left;
+}
+.classfiy view:last-child{
+  float:right;
+  margin-right:150rpx;
+}
+.classfiy view text{
+  padding:0 20rpx 30rpx 20rpx;
+  font-size:35rpx;
+}
+.spe{
+  border-bottom:1rpx solid #fed5d5;
+  color:#fed5d5;
+}
+
+
+.orderinfs{
+  margin-top:30rpx;
+  background: #ffffff;
+  padding:30rpx;
+}
+.expert,.introduce{
+  margin-bottom:20rpx;
+}
+.inf{
+  font-size:30rpx;
+  color:#bcbcbc;
+  margin:5rpx 0;
+}
+/*body结束*/

@@ -3,26 +3,18 @@
   margin:0;
   padding:0;
   background: #f2f2f2;
+  padding-top:20rpx;
 }
 /*title开始*/
-.title{
-  background: #ffffff;
-  text-align: center;
-  height:100rpx;
-  font-size:36rpx;
-  font-weight: 500;
-  line-height: 100rpx;
-  margin-bottom:25rpx;
-}
 .body{
-  height: 300rpx;
+  /* height: 300rpx; */
   background: #ffffff;
 }
 .nowtime{
   /* background: #ffffff; */
   padding:25rpx 0;
   height:50rpx;
-  border-bottom:1px solid #bfbfbf;
+  border-bottom:1px solid #f8f8f8;
   position: relative;
 }
 .picker{
@@ -59,36 +51,73 @@
   color:#ffffff;
 }
 .time{
-  height: 200rpx;
-  border-bottom: 1rpx solid #bcbcbc;
+  border-bottom:1px solid #f8f8f8;
 }
+.weeks{
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  padding:25rpx 30rpx;
+  border-bottom:1px solid #f8f8f8;
+}
+.date{
+  text-align: center;
+  padding:20rpx;
+  margin-left:10rpx;
+  overflow: hidden;
+}
+.week{
+  font-size:30rpx;
+  float:left;
+  width:14%;
+}
+.week-date view{
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.week-date view:first-child{
+  margin-bottom:20rpx;
+}
+.week-date{
+  padding:15rpx 18.5rpx;
+  font-size:30rpx;
+  float:left;
+  border-radius: 50%;
+  width:9%;
+}
+.active{
+  background: #fed5d5;
+  color:#ffffff;
+}
+
 .doctor{
   margin-top:20rpx;
-  border-bottom:1rpx solid #bfbfbc;
+  border-bottom:1px solid #f8f8f8;
+  overflow: hidden;
 }
 .doctor-inf{
-  padding:10rpx 30rpx;
+  margin:10rpx 30rpx;
   overflow: hidden;
   position: relative;
+  border-bottom:1rpx solid #f8f8f8;
 }
 .doctor-inf image{
   height: 120rpx;
   width: 120rpx;
-  /* overflow: hidden; */
-  /* float:left; */
+  border-radius: 10rpx;
 }
 .doctor-infname{
   float:left;
   height: 120rpx;
-  /* line-height: 150rpx; */
   position:absolute;
   top:50%;
-  left:180rpx;
+  left:160rpx;
   transform: translate(0%,-50%);
 }
 .infname{
   height: 60rpx;
   line-height: 60rpx;
+  font-size:35rpx;
 }
 .infpost{
   height: 75rpx;
@@ -98,7 +127,7 @@
 .docotr-but{
   font-size:30rpx;
   position:absolute;
-  right:30rpx;
+  right:0rpx;
   top:50%;
   transform: translate(0%,-50%);
 }

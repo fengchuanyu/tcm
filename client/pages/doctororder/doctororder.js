@@ -14,19 +14,25 @@ Page({
       url: '../dataorder/dataorder'
     })
   },
+  introduce: function (event) {
+    var newid = event.currentTarget.dataset.id;
+    // console.log(newid);
+    wx.navigateTo({
+       url: '../introduces/introduces?id=' + newid
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-    console.log('onLoad')
+    // console.log('onLoad')
     var that = this
     // 使用 Mock
     API.ajax('', function (res) {
       //这里既可以获取模拟的res
-      console.log(res)
+      // console.log(res)
       that.setData({
-        doctorlist: res.data['doctordata'].slice(0, 3),
-        articlelist: res.data['articledata'][0]
+        doctorlist: res.data['doctordata']
       })
     });
   },

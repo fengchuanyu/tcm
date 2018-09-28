@@ -1,0 +1,33 @@
+<!--client/pages/registered/registered.wxml-->
+<view class='big'>
+  <view class="body">
+    <view class='reg-inf'>
+      <view class='inf'>
+        医生姓名
+        <text>{{detail.name}}</text>
+      </view>
+      <view class='inf'>
+        就诊科室
+        <text>肿瘤内科-门诊</text>
+      </view>
+      <view class='inf time'>
+        就诊时段
+        <text>白天</text>
+        <text>星期二</text>
+        <text>2018-09-11</text>
+      </view>
+    </view>
+    <view class='money'>
+      挂号金额
+        <text>￥100.00</text>
+    </view>
+    <view class='money'>
+      就诊人
+        <text>张三</text>
+    </view>
+    <view class='true'>
+      <view bindtap='regtrue'>确定</view>
+    </view>
+  </view>
+</view>
+

@@ -9,14 +9,14 @@
       </view>
     </view>
     <view class="right">
-    <view class="right-one">
+    <view class="right-one" bindtap='brif'>
       <image src="../../image/加号2.png" class="right-img"></image>   
       <view class="right-inf">
         <view class="right-title">了解我们</view>
         <view class="right-content">查看医院简介</view>
       </view>
     </view>
-    <view class="right-two">
+    <view class="right-two" bindtap='map'>
       <image src="../../image/纸飞机.png" class="right-img"></image>
       <view class="right-inf">
         <view class="right-title">就医指南</view>
@@ -28,7 +28,7 @@
   <view class="doctor">
     <view class="doctor-title">
       <text class="doctor-title-left">本院医生</text>
-      <text class="doctor-title-right">更多></text>
+      <text class="doctor-title-right" bindtap='localdoc'>更多></text>
     </view>
     <view class="doctor-inf">
     <block wx:for="{{nameList}}" wx:key="id" >
@@ -36,7 +36,7 @@
             {{item.name}}
         </text>
     </block>
-      <view class="doctor-inf-li" wx:for="{{doctorlist}}" wx:key="id">
+      <view class="doctor-inf-li" wx:for="{{doctorlist}}" wx:key="id" bindtap='doctor' data-id='{{item.id}}'>
         <image src="../../image/{{item.img}}" ></image>
         <view class='doctor-name'>{{item.name}}</view>
         <view class='doctor-post'>{{item.post}}</view>
@@ -46,7 +46,7 @@
   <view class="article">
     <view class="article-title">
       <text class="article-title-left">今日文章</text>
-      <text class="article-title-right">更多></text>
+      <text class="article-title-right" bindtap='health'>更多></text>
     </view>
     <view class="article-main">
       <view class="article-header">

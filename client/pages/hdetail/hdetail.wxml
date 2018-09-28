@@ -1,0 +1,13 @@
+<!--pages/hdetail/hdetail.wxml-->
+<scroll-view class='wrap'>
+    <view class='moddle'>
+        <image src="../../image/touxiang.png" class='img'></image>
+        <view class='name'>{{details.writer}}</view>
+        <view class='lebal'>{{details.lable}}</view>
+        <button class='btn'>收藏</button>
+    </view>
+    <view class='content'>
+     {{details.content}}
+    </view>
+
+</scroll-view>
