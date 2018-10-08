@@ -1,6 +1,18 @@
 <!--pages/main/main.wxml-->
+
 <view class="big">
-  <image src="../../image/main.jpg" class="header-img"></image>
+  <swiper indicator-dots="false" autoplay="true" interval="2000" duration="500" class='swiper-img'>
+      <swiper-item>
+        <image src='../../image/main.jpg' class="header-img"></image>
+      </swiper-item>
+        <swiper-item>
+        <image src= '../../image/main.jpg' class="header-img"></image>
+      </swiper-item>
+        <swiper-item>
+        <image src='../../image/main.jpg' class="header-img"></image>
+      </swiper-item>
+  </swiper>  
+  <!-- <image src="../../image/main.jpg" class="header-img"></image> -->
   <view class="main">
     <view bindtap='appointment'>
       <view class="left">
