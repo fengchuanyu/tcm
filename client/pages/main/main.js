@@ -47,6 +47,7 @@ Component({
     },
     doctor:function(event){
       var newid = event.currentTarget.dataset.id;
+      console.log(newid);
       wx.navigateTo({
         url: '../introduces/introduces?id=' + newid
       })
@@ -84,8 +85,8 @@ Component({
         //这里既可以获取模拟的res
         // console.log(res)
         that.setData({
-          doctorlist: res.data['doctordata'].slice(0, 3),
-          articlelist:res.data['articledata'][0]
+          doctorlist: res.data['doctor'].slice(0, 3),
+          articlelist:res.data['article'][0]
         })
       });
 

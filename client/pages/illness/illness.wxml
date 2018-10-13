@@ -1,8 +1,8 @@
 <!--client/pages/illness/illness.wxml-->
 <view class='wrap'>
   <view class='content'>
-      <view wx:for="{{illnesslist}}" wx:key="id" class="illness" bindtap='detail' data-id='{{item.id}}' data-name=' {{item.name}}'>           
-              {{item.name}}   
+      <view wx:for="{{illnesslist}}" wx:key="id" class="illness" bindtap='detail' data-id='{{item.iid}}' data-name=' {{item.ill_title}}'>           
+              {{item.ill_title}}   
       </view> 
   </view>  
 </view>

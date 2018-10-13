@@ -27,15 +27,15 @@
       </view>
     </view>
     <view class='doctor'>
-      <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf" bindtap="introduce" data-id='{{item.id}}'>
-        <image src="../../image/{{item.img}}"></image>
+      <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf" bindtap="introduce" data-id='{{item.did}}'>
+        <image src="../../image/{{item.doctor_image}}"></image>
         <view class='doctor-infname'>
-          <view class="infname">{{item.name}}</view>
-          <view class="infpost">{{item.post}}</view>
+          <view class="infname">{{item.doctor_name}}</view>
+          <view class="infpost">{{item.doctor_job}}</view>
         </view>
         <view class="docotr-but">
-          <text class="doctor-num">余号:20</text>
-          <text class='doctor-money'>￥23:00</text>
+          <text class="doctor-num">余号:{{item.doctor_number}}</text>
+          <text class='doctor-money'>￥{{item.doctor_price}}:00</text>
         </view>
       </view>
     </view>

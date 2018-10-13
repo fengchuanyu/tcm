@@ -33,7 +33,7 @@ Page({
       //这里既可以获取模拟的res
       // console.log(res)
       that.setData({
-        doctorlist: res.data['doctordata'],
+        doctorlist: res.data['doctor'],
         postData:true
       })
     })

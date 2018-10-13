@@ -24,7 +24,7 @@ Page({
     API.ajax('', function (res) {
       //这里既可以获取模拟的res
       that.setData({
-        doctorlist: res.data['doctordata']
+        doctorlist: res.data['doctor']
       })
     });
 

@@ -4,8 +4,8 @@
       <view class="doctor-inf">
         <image src='../../image/doctor.jpg'></image>
         <view class='doctor-infname'>
-          <view class="infname">{{detail.name}}</view>
-          <view class="infpost">{{detail.post}}</view>
+          <view class="infname">{{detail.doctor_name}}</view>
+          <view class="infpost">{{detail.doctor_job}}</view>
         </view>
       </view>
       <view class='classfiy'>
@@ -16,11 +16,11 @@
     <view class='orderinfs'>
       <view class='expert'>
         擅长
-        <view class='inf'>暂无相关信息</view>
+        <view class='inf'>{{detail.doctor_special}}</view>
       </view>
       <view class='introduces'>
         介绍
-        <view class='inf'>暂无相关信息</view>
+        <view class='inf'>{{detail.doctor_message}}</view>
       </view>
     </view>
   </view>

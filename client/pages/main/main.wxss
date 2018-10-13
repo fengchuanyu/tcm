@@ -1,5 +1,7 @@
 /* pages/main/main.wxss */
-
+swiper{
+  height:400rpx;
+}
 .big{
   margin:0;
   padding:0;
@@ -97,7 +99,7 @@
 }
 .doctor-inf-li{
   float:left;
-  margin-right:35rpx;
+  margin-right:34rpx;
   height: 315rpx;
 }
 .doctor-inf-li:last-child{

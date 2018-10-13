@@ -12,10 +12,10 @@
   <swiper-item>
    <view class='share-eg'>
        <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf">
-        <image src="../../image/{{item.img}}"></image>
+        <image src="../../image/{{item.doctor_image}}"></image>
         <view class='doctor-infname'>
-          <view class="infname">{{item.name}}</view>
-          <view class="infpost">{{item.post}}</view>
+          <view class="infname">{{item.doctor_name}}</view>
+          <view class="infpost">{{item.doctor_job}}</view>
         </view>
         <view >
           <text class="doctor-time_one">2018-10-10</text>
@@ -28,10 +28,10 @@
   <swiper-item>
     <view class='share-eg'>
      <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf">
-        <image src="../../image/{{item.img}}"></image>
+        <image src="../../image/{{item.doctor_image}}"></image>
         <view class='doctor-infname'>
-          <view class="infname">{{item.name}}</view>
-          <view class="infpost">{{item.post}}</view>
+          <view class="infname">{{item.doctor_name}}</view>
+          <view class="infpost">{{item.doctor_job}}</view>
         </view>
         <view >
           <text class="doctor-time_one">2018-10-10</text>

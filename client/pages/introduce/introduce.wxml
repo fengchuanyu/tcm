@@ -5,8 +5,8 @@
       <view class="doctor-inf">
         <image src='../../image/doctor.jpg'></image>
         <view class='doctor-infname'>
-          <view class="infname">{{detail.name}}</view>
-          <view class="infpost">{{detail.post}}</view>
+          <view class="infname">{{detail.doctor_name}}</view>
+          <view class="infpost">{{detail.doctor_job}}</view>
         </view>
       </view>
       <view class='classfiy'>
@@ -18,22 +18,22 @@
       <view class="orderinf" bindtap='registered' data-id='{{newid}}'>
         <view>2018-09-09</view>
         <view class="docotr-but">
-          <text class="doctor-num">余号:20</text>
-          <text class='doctor-money'>￥23:00</text>
+          <text class="doctor-num">余号:{{detail.doctor_number}}</text>
+          <text class='doctor-money'>￥{{detail.doctor_price}}:00</text>
         </view>
       </view>
       <view class="orderinf" bindtap='registered' data-id='{{newid}}'>
         <view>2018-09-09</view>
         <view class="docotr-but">
-          <text class="doctor-num">余号:20</text>
-          <text class='doctor-money'>￥23:00</text>
+          <text class="doctor-num">余号:{{detail.doctor_number}}</text>
+          <text class='doctor-money'>￥{{detail.doctor_price}}:00</text>
         </view>
       </view>
       <view class="orderinf" bindtap='registered' data-id='{{newid}}'>
         <view>2018-09-09</view>
         <view class="docotr-but">
-          <text class="doctor-num">余号:20</text>
-          <text class='doctor-money'>￥23:00</text>
+          <text class="doctor-num">余号:{{detail.doctor_number}}</text>
+          <text class='doctor-money'>￥{{detail.doctor_price}}:00</text>
         </view>
       </view>
     </view>

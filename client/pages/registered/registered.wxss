@@ -23,19 +23,29 @@
   float:right;
   color:#bcbcbc;
 }
-.time text{
+.date text{
   color:#ff9600;
   margin-left:10rpx;
 }
-.money{
+.money,.userid,.people{
   background: #ffffff;
   padding:0 30rpx;
   height: 100rpx;
-  /* border-bottom:1rpx solid #f8f8f8; */
+  border-bottom:1rpx solid #f8f8f8;
   line-height: 100rpx;
+}
+.userid{
   margin-bottom:30rpx;
 }
+.people input{
+  float:right;
+  color:#bcbcbc;
+}
 .money text{
+  float:right;
+  color:#bcbcbc;
+}
+.userid input{
   float:right;
   color:#bcbcbc;
 }
@@ -53,5 +63,8 @@
   color:#ffffff;
   line-height: 80rpx;
   text-align: center;
+}
+input{
+  height:100rpx;
 }
 /*body结束*/

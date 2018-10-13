@@ -50,11 +50,10 @@ Page({
       //这里既可以获取模拟的res
       // console.log(res)
       that.setData({
-        infolist: res.data['articledata'],
+        infolist: res.data['article'],
         postData: true
       })
     })
-    console.log(this.data.infolist[0].img)
   },
 
   /**

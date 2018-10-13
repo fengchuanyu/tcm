@@ -74,6 +74,7 @@
 .article-main-content{
   font-size:30rpx;
   padding:10rpx 0;
+  margin-bottom:10rpx;
 
   text-overflow:ellipsis;
   -webkit-box-orient:vertical;

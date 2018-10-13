@@ -19,16 +19,17 @@ Page({
     this.setData({
       newid: options.id
     })
+    // console.log(this.data.newid);
     var that = this;
     // 使用 Mock
     API.ajax('', function (res) {
       //这里既可以获取模拟的res
       that.setData({
-        details: res.data['articledata'][newid]
+        details: res.data['article'][newid]
       })
     });
     wx.setNavigationBarTitle({
-      title: that.data.details.title//页面标题为路由参数
+      title: that.data.details.article_title//页面标题为路由参数
     })
 
   },

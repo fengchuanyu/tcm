@@ -7,11 +7,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isshow: 'hidden',
+    isdisplay: "-webkit-box",
+    isheight: "220rpx",
+    howshow: "显示全部",
+    showtime: true
+  },
+  showall: function () {
+    if (this.data.showtime) {
+      console.log('more');
+      this.setData({
+        isshow: "",
+        isdisplay: "",
+        isheight: "",
+        howshow: "收起",
+        showtime: false
+      })
+    }
+    else {
+      this.setData({
+        isshow: 'hidden',
+        isdisplay: "-webkit-box",
+        isheight: "220rpx",
+        howshow: "显示全部",
+        showtime: true
+      })
+    }
   },
   toDetail: function (event) {
   
     var newid = event.currentTarget.dataset.id;
+    // console.log(newid);
     wx.navigateTo({
       url: '/pages/hdetail/hdetail?id='+newid,
     })
@@ -27,7 +53,7 @@ Page({
       //这里既可以获取模拟的res
       // console.log(res)
       that.setData({
-        infolist:res.data['articledata']
+        infolist:res.data['article']
       })
     });
   },

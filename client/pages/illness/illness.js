@@ -27,7 +27,7 @@ Page({
       //这里既可以获取模拟的res
       // console.log(res)
       that.setData({
-        illnesslist:res.data['illdata'] 
+        illnesslist:res.data['ill-class'] 
       })
     });
     

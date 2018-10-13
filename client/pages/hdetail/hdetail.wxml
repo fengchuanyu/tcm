@@ -3,11 +3,11 @@
     <view class='moddle'>
         <image src="../../image/touxiang.png" class='img'></image>
         <view class='name'>{{details.writer}}</view>
-        <view class='lebal'>{{details.lable}}</view>
+        <view class='lebal'>{{details.atricle_class}}</view>
         <button class='btn'>收藏</button>
     </view>
     <view class='content'>
-     {{details.content}}
+     {{details.article_content}}
     </view>
 
 </scroll-view>

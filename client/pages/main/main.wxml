@@ -1,5 +1,4 @@
 <!--pages/main/main.wxml-->
-
 <view class="big">
   <swiper indicator-dots="false" autoplay="true" interval="2000" duration="500" class='swiper-img'>
       <swiper-item>
@@ -48,10 +47,10 @@
             {{item.name}}
         </text>
     </block>
-      <view class="doctor-inf-li" wx:for="{{doctorlist}}" wx:key="id" bindtap='doctor' data-id='{{item.id}}'>
-        <image src="../../image/{{item.img}}" ></image>
-        <view class='doctor-name'>{{item.name}}</view>
-        <view class='doctor-post'>{{item.post}}</view>
+      <view class="doctor-inf-li" wx:for="{{doctorlist}}" wx:key="id" bindtap='doctor' data-id='{{item.did}}'>
+        <image src="../../image/{{item.doctor_image}}" ></image>
+        <view class='doctor-name'>{{item.doctor_name}}</view>
+        <view class='doctor-post'>{{item.doctor_job}}</view>
       </view>
     </view>
   </view>
@@ -62,16 +61,16 @@
     </view>
     <view class="article-main">
       <view class="article-header">
-        <view class="article-main-title">{{articlelist.title}}</view>
+        <view class="article-main-title">{{articlelist.article_title}}</view>
         <view class="article-main-writer">
           <text>{{articlelist.writer}}</text>
-          <text>{{articlelist.lable}}</text>
+          <text>{{articlelist.article_job}}</text>
         </view>
       </view>
-        <view class="article-main-content" style="overflow:{{isshow}};display:{{isdisplay}};height:{{isheight}};">{{articlelist.content}}
+        <view class="article-main-content" style="overflow:{{isshow}};display:{{isdisplay}};height:{{isheight}};">{{articlelist.article_content}}
         </view>
         <view class='article-more' bindtap='showall'>{{howshow}}</view>
-        <view class="article-other">
+        <!-- <view class="article-other">
           <view class="article-visitnum">
             <text>{{articlelist.visitcount}}</text>
             <image src="../../image/up.png"></image>
@@ -81,7 +80,7 @@
           <view>关注问题</view>
           <image src='../../image/duanxin.png' class="comment"></image> 
           <view> {{articlelist.commit}}条评论</view>
-        </view>
+        </view> -->
     </view>
   </view>
   <view style="height:1rpx;"></view>
