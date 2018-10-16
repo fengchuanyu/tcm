@@ -91,10 +91,7 @@ Component({
       //   })
       // });
       wx.request({
-        url: 'https://us5qsybm.qcloud.la/../Welcome/index',
-        header: {
-          'content-type': 'application/json' // 默认值
-        },
+        url: 'https://us5qsybm.qcloud.la/infor/get_doctor_list',
         success: res => {
           console.log(res.data);
           this.setData({
