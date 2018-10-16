@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    isbegin:true
   },
   //获取当前滑块的index
   bindchange: function (e) {
@@ -14,10 +14,12 @@ Page({
     that.setData({
       currentData: e.detail.current
     })
-    // console.log(e.detail.current)
   },
   //点击切换，滑块index赋值
   checkCurrent: function (e) {
+    this.setData({
+      isbegin:false
+    })
     const that = this;
 
     if (that.data.currentData === e.target.dataset.current) {

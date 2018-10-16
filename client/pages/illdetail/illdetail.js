@@ -20,7 +20,7 @@ Page({
     API.ajax('', function (res) {
       //这里既可以获取模拟的res
       that.setData({
-        details: res.data['ill-class'][that.data.newid]
+        details: res.data['ill-class'][that.data.newid-1]
       })
     });
    },

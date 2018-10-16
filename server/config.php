@@ -24,7 +24,7 @@ $config = [
         'host' => 'localhost',
         'port' => 3306,
         'user' => 'root',
-        'db'   => 'cAuth',
+        'db'   => 'hospital',
         'pass' => 'wx00dd65d70f19dcec',
         'char' => 'utf8mb4'
     ],

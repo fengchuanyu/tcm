@@ -23,7 +23,7 @@
   right:30rpx;
   top:50%;
   transform: translateY(-50%);
-  width:128rpx;
+  /* width:128rpx; */
   height:70rpx;
   color:white;
   line-height: 70rpx;
@@ -35,4 +35,8 @@
   padding:0 30rpx;
   font-size: 32rpx;
   line-height: 1.5;
+}
+.save
+{
+  display: none;
 }

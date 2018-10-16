@@ -36,10 +36,14 @@ Page({
     var nowmonth = nowdate.getMonth()+1;
     var nowdate = nowdate.getDate();
     var nowday = new Date().getDay();
-    // var nowyear = 2000;
-    // var nowmonth = 3;
-    // var nowdate = 2;
-    // var nowday = 4;
+    if(nowday == 0){
+      nowday = 7;
+    }
+  
+    // var nowyear = 2018;
+    // var nowmonth = 10;
+    // var nowdate = 14;
+    // var nowday = 7;
     var now = nowdate - (nowday - 1);
     var colorlist = ['#000000', '#000000', '#000000', '#000000', '#000000', '#000000', '#000000'];
     var bglist = ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'];
@@ -64,6 +68,7 @@ Page({
         colorlist[i] = '#bcbcbc';
       }
     }
+
     
     this.setData({
       datelist:date,

@@ -1,7 +1,7 @@
 <!--pages/my_yuyue/my_yuyue.wxml-->
 <view class='topTabSwiper'>
   <view class='header'>
-   <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>        未到时预约
+   <view class='tab  {{currentData == 0 ? "tabBorer" : ""}} {{isbegin == true ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>        未到时预约
   </view>
   <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>
     已过期预约

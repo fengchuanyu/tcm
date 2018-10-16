@@ -39,7 +39,7 @@ Page({
     var newid = event.currentTarget.dataset.id;
     // console.log(newid);
     wx.navigateTo({
-      url: '/pages/hdetail/hdetail?id='+newid,
+      url: '/pages/hdetail/hdetail?id=' + newid + '&isSave=' + false,
     })
 
   },

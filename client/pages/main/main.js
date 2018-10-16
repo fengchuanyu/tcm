@@ -10,7 +10,10 @@ Component({
   },
 
   /**
-   * 组件的初始数据
+   * 组件的初始数据https:/
+   * 
+   * 
+   *8555 fdg 
    */
   data: {
     isshow:'hidden',
@@ -78,20 +81,28 @@ Component({
       })
     },
     onLoad: function () {
-      // console.log('onLoad')
-      var that = this
-      // 使用 Mock
-      API.ajax('', function (res) {
-        //这里既可以获取模拟的res
-        // console.log(res)
-        that.setData({
-          doctorlist: res.data['doctor'].slice(0, 3),
-          articlelist:res.data['article'][0]
-        })
-      });
-
-      // console.log(this.data.doctorlist)
-      // console.log(this.data.articlelist)
+      // var that = this
+      // // 使用 Mock
+      // API.ajax('/infor/get_doctor_list',{}, function (res) {
+      //   //这里既可以获取模拟的res
+      //   that.setData({
+      //     // doctorlist: res.data['doctor'].slice(0, 3),
+      //     // articlelist:res.data['article'][0]
+      //   })
+      // });
+      wx.request({
+        url: 'https://us5qsybm.qcloud.la/../Welcome/index',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: res => {
+          console.log(res.data);
+          this.setData({
+            logoList: res.data
+          })
+          console.log(this.data.logoList);
+        }
+      })
     }
   }
 })

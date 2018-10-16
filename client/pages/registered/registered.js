@@ -28,7 +28,7 @@ Page({
     API.ajax('', function (res) {
       //这里既可以获取模拟的res
       that.setData({
-        detail: res.data['doctor'][newid]
+        detail: res.data['doctor'][newid-1]
       })
     });
     // console.log(this.data.detail);

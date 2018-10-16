@@ -14,10 +14,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+    // console.log(options);
     var newid = options.id;
     this.setData({
-      newid: options.id
+      newid: options.id,
+      isSave:options.isSave
     })
     // console.log(this.data.newid);
     var that = this;
@@ -25,7 +26,7 @@ Page({
     API.ajax('', function (res) {
       //这里既可以获取模拟的res
       that.setData({
-        details: res.data['article'][newid]
+        details: res.data['article'][newid-1]
       })
     });
     wx.setNavigationBarTitle({

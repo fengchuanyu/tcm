@@ -37,7 +37,7 @@ Page({
   hdetail:function(event){
     var newid = event.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/hdetail/hdetail?id=' + newid,
+      url: '/pages/hdetail/hdetail?id=' + newid + '&isSave=' + true,
     })
   },
   /**
