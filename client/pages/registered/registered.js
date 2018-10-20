@@ -7,11 +7,51 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userName:'',
+    id:''
   },
   regtrue:function(){
-    wx.navigateTo({
-      url: '../regtrue/regtrue'
+    if(this.data.userName != '' && this.data.id != '')
+    {
+      var nowdate = new Date();
+      var nowyear = nowdate.getFullYear();
+      var nowmonth = nowdate.getMonth() + 1;
+      var nowdate = nowdate.getDate();
+      var nowhours = new Date().getHours();
+      var nowminutes = new Date().getMinutes();
+      var nowseconds = new Date().getSeconds();
+      var nowmiliseconds = new Date().getMilliseconds();
+      var nowday = new Date().getDay();
+      var time = nowyear + '/' + nowmonth + '/' + nowdate + '/' + nowhours + '/' + nowminutes + '/' + nowseconds;
+
+      wx.request({
+        url: 'https://us5qsybm.qcloud.la/infor/add_reg',
+        data:{
+          name:this.data.userName,
+          id:this.data.id,
+          did: this.data.detail.did,
+          nowtime:time
+        },
+        success: res => {
+          console.log(res.data);
+        }
+      });
+      console.log(this.data.id + this.data.userName);
+      wx.navigateTo({
+        url: '../regtrue/regtrue'
+      })
+    }else{
+      
+    }
+  },
+  userNameInput:function(e){
+    this.setData({
+      userName: e.detail.value
+    })
+  },
+  idInput: function (e) {
+    this.setData({
+      id: e.detail.value
     })
   },
   /**
@@ -23,15 +63,23 @@ Page({
     this.setData({
       newid: options.id
     })
-    var that = this;
-    // 使用 Mock
-    API.ajax('', function (res) {
-      //这里既可以获取模拟的res
-      that.setData({
-        detail: res.data['doctor'][newid-1]
-      })
+    // var that = this;
+    // // 使用 Mock
+    // API.ajax('', function (res) {
+    //   //这里既可以获取模拟的res
+    //   that.setData({
+    //     detail: res.data['doctor'][newid-1]
+    //   })
+    // });
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
+      success: res => {
+        this.setData({
+          detail: res.data[newid - 1]
+        })
+        // console.log(this.data.detail);
+      }
     });
-    // console.log(this.data.detail);
   },
 
   /**

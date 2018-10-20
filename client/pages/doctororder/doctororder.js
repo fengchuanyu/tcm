@@ -26,14 +26,23 @@ Page({
    */
   onLoad: function () {
     // console.log('onLoad')
-    var that = this
-    // 使用 Mock
-    API.ajax('', function (res) {
-      //这里既可以获取模拟的res
-      // console.log(res)
-      that.setData({
-        doctorlist: res.data['doctor']
-      })
+    // var that = this
+    // // 使用 Mock
+    // API.ajax('', function (res) {
+    //   //这里既可以获取模拟的res
+    //   // console.log(res)
+    //   that.setData({
+    //     doctorlist: res.data['doctor']
+    //   })
+    // });
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
+      success: res => {
+        this.setData({
+          doctorlist: res.data
+        })
+        // console.log(this.data.doctorlist);
+      }
     });
   },
 

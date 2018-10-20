@@ -47,7 +47,7 @@
             {{item.name}}
         </text>
     </block>
-      <view class="doctor-inf-li" wx:for="{{doctorlist}}" wx:key="id" bindtap='doctor' data-id='{{item.did}}'>
+      <view class="doctor-inf-li" wx:for="{{doctorlist}}" wx:key="id" bindtap='doctor' data-id='{{item.did}}' wx:if='{{isbegin}}'>
         <image src="../../image/{{item.doctor_image}}" ></image>
         <view class='doctor-name'>{{item.doctor_name}}</view>
         <view class='doctor-post'>{{item.doctor_job}}</view>
@@ -63,8 +63,8 @@
       <view class="article-header">
         <view class="article-main-title">{{articlelist.article_title}}</view>
         <view class="article-main-writer">
-          <text>{{articlelist.writer}}</text>
-          <text>{{articlelist.article_job}}</text>
+          <text>{{doctorlist[articlelist.article_id-1].doctor_name}}</text>
+          <text>{{illnesslist[articlelist.article_class-1].ill_title}}</text>
         </view>
       </view>
         <view class="article-main-content" style="overflow:{{isshow}};display:{{isdisplay}};height:{{isheight}};">{{articlelist.article_content}}

@@ -3,7 +3,7 @@
   <view class='body'>
     <image src='../../image/duihao.png'></image>
     <view>
-      请在xxxx年xx月xx日  12:30前至xxxx就诊  过时作废
+      请在{{nowdate}}  12:30前就诊  过时作废
     </view>
   </view>
 </view>

@@ -99,7 +99,7 @@ swiper{
 }
 .doctor-inf-li{
   float:left;
-  margin-right:34rpx;
+  margin-right:30rpx;
   height: 315rpx;
 }
 .doctor-inf-li:last-child{

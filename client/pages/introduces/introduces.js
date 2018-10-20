@@ -24,15 +24,23 @@ Page({
     this.setData({
       newid: options.id
     })
-    var that = this;
-    // 使用 Mock
-    API.ajax('', function (res) {
-      //这里既可以获取模拟的res
-      that.setData({
-        detail: res.data['doctor'][newid-1]
-      })
+    // var that = this;
+    // // 使用 Mock
+    // API.ajax('', function (res) {
+    //   //这里既可以获取模拟的res
+    //   that.setData({
+    //     detail: res.data['doctor'][newid-1]
+    //   })
+    // });
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
+      success: res => {
+        this.setData({
+          detail: res.data[newid-1]
+        })
+        // console.log(this.data.detail);
+      }
     });
-    // console.log(this.data.detail);
   },
 
 

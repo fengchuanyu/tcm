@@ -11,8 +11,15 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function () {
+    var nowdate = new Date();
+    var nowyear = nowdate.getFullYear();
+    var nowmonth = nowdate.getMonth() + 1;
+    var nowdate = nowdate.getDate();
+    var date = nowyear + '年' + nowmonth + '月' + nowdate + '日';
+    this.setData({
+      nowdate: date
+    })
   },
 
   /**

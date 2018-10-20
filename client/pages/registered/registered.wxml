@@ -23,11 +23,11 @@
     </view>
     <view class='people'>
       <text>就诊人</text>
-      <input type="text" style='width:90rpx;'></input>
+      <input type="text" style='width:90rpx;' name="userName" bindinput ="userNameInput"></input>
     </view>
     <view class='userid'>
       <text>身份证</text>
-      <input type="text" style='width:200rpx;'></input>
+      <input type="text" style='width:200rpx;' name="id" bindinput="idInput"></input>
     </view>
     <view class='true'>
       <view bindtap='regtrue'>确定</view>

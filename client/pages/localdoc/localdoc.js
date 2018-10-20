@@ -19,13 +19,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    // 使用 Mock
-    API.ajax('', function (res) {
-      //这里既可以获取模拟的res
-      that.setData({
-        doctorlist: res.data['doctor']
-      })
+    // var that = this;
+    // // 使用 Mock
+    // API.ajax('', function (res) {
+    //   //这里既可以获取模拟的res
+    //   that.setData({
+    //     doctorlist: res.data['doctor']
+    //   })
+    // });
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
+      success: res => {
+        this.setData({
+          doctorlist: res.data
+        })
+        // console.log(this.data.doctorlist);
+      }
     });
 
   },

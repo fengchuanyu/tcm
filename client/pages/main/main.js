@@ -20,7 +20,8 @@ Component({
     isdisplay:"-webkit-box",
     isheight:"220rpx",
     howshow:"显示全部",
-    showtime:true
+    showtime:true,
+    isbegin:true
   },
 
   /**
@@ -50,7 +51,7 @@ Component({
     },
     doctor:function(event){
       var newid = event.currentTarget.dataset.id;
-      console.log(newid);
+      // console.log(newid);
       wx.navigateTo({
         url: '../introduces/introduces?id=' + newid
       })
@@ -91,13 +92,30 @@ Component({
       //   })
       // });
       wx.request({
-        url: 'https://us5qsybm.qcloud.la/infor/get_doctor_list',
+        url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
         success: res => {
-          console.log(res.data);
           this.setData({
-            logoList: res.data
+            doctorlist: res.data.slice(0,3),
           })
-          console.log(this.data.logoList);
+          console.log(this.data.doctorlist);
+        }
+      });
+      wx.request({
+        url: 'https://us5qsybm.qcloud.la/infor/get_article',
+        success: res => {
+          this.setData({
+            articlelist: res.data[0]
+          })
+          console.log(this.data.articlelist);
+        }
+      });
+      wx.request({
+        url: 'https://us5qsybm.qcloud.la/infor/get_illnesslist',
+        success: res => {
+          this.setData({
+            illnesslist: res.data
+          })
+          console.log(this.data.illnesslist);
         }
       })
     }
