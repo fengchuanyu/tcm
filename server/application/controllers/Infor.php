@@ -15,9 +15,9 @@ class Infor extends CI_Controller {
         $result = $this -> Infor_model -> get_article_list();
         echo json_encode($result);
     }
-    public function get_article_only(){
+    public function get_article_ill(){
       $this -> load -> model('Infor_model');
-      $result = $this -> Infor_model -> get_article_only();
+      $result = $this -> Infor_model -> get_article_ill();
       echo json_encode($result);
     }
     public function get_illnesslist()
@@ -29,11 +29,12 @@ class Infor extends CI_Controller {
     public function add_reg()
     {
         $name = $this->input->get('name');
-        $id = $this->input->get('id');
+        $ID = $this->input->get('ID');
         $did = $this->input->get('did');
+        $uid = $this->input->get('uid');
         $time = $this->input->get('nowtime');
         $this -> load -> model('Infor_model');
-        $result = $this -> Infor_model -> add_reg_list($name,$id,$did,$time);
+        $result = $this -> Infor_model -> add_reg_list($name,$ID,$did,$uid,$time);
         echo json_encode($result);
     }
 
@@ -55,6 +56,24 @@ class Infor extends CI_Controller {
       $time = $this->input->get('time');
       $this -> load -> model('Infor_model');
       $result = $this -> Infor_model -> insert_collect($aid,$uid,$time);
+      echo json_encode($result);
+    }
+    public function delete_collect(){
+      $aid = $this->input->get('aid');
+      $uid = $this->input->get('uid');
+      $this -> load -> model('Infor_model');
+      $result = $this -> Infor_model -> delete_collect($aid,$uid);
+      echo json_encode($result);
+    }
+    public function update_user(){
+      $uid = $this->input->get('uid');
+      $name = $this->input->get('name');
+      $ID = $this->input->get('ID');
+      $phone = $this->input->get('phone');
+      $bir = $this->input->get('bir');
+      $sex = $this->input->get('sex');
+      $this -> load -> model('Infor_model');
+      $result = $this -> Infor_model -> update_user($uid,$name,$ID,$phone,$bir,$sex);
       echo json_encode($result);
     }
 }

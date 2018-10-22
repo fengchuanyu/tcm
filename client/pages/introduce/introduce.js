@@ -10,15 +10,19 @@ Page({
 
   },
   introduces: function (event) {
-    var newid = event.currentTarget.dataset.id;
+    // var newid = event.currentTarget.dataset.id;
+    var newid = this.data.detail;
+    let str = JSON.stringify(newid);
     wx.navigateTo({
-      url: '../introduces/introduces?id='+newid
+      url: '../introduces/introduces?id='+str
     })
   },
   registered:function(event){
-    var newid = event.currentTarget.dataset.id;
+    // var newid = event.currentTarget.dataset.id;
+    var newid = this.data.detail;
+    let str = JSON.stringify(newid);
     wx.navigateTo({
-      url: '../registered/registered?id=' + newid
+      url: '../registered/registered?id=' + str
     })
   },
   /**
@@ -27,8 +31,9 @@ Page({
   onLoad: function (options) {
 
     var newid = options.id;
+    let item = JSON.parse(options.id);
     this.setData({
-      newid: options.id
+      detail: item
     })
     // var that = this;
     // // 使用 Mock
@@ -38,15 +43,6 @@ Page({
     //     detail: res.data['doctor'][newid-1]
     //   })
     // });
-      wx.request({
-        url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
-        success: res => {
-          this.setData({
-            detail: res.data[newid]
-          })
-          // console.log(this.data.detail);
-        }
-      });
   },
 
   /**

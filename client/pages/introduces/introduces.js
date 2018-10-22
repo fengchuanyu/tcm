@@ -10,19 +10,41 @@ Page({
 
   },
   introduce:function(event){
-    var newid = event.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: '../introduce/introduce?id=' + newid
-    })
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/select_user',
+      data: {
+        openid: getApp().globalData.openid
+      },
+      success: res => {
+        this.setData({
+          user: res.data[0]
+        })
+        // console.log(this.data.user[0].user_name);
+        if (this.data.user.user_name) {
+          // var newid = event.currentTarget.dataset.id;
+          var newid = this.data.detail;
+          let str = JSON.stringify(newid);
+          wx.navigateTo({
+            url: '../introduce/introduce?id=' + str
+          })
+        } else {
+          wx.navigateTo({
+            url: '../my_information/my_information?from=reg'
+          })
+        }
+      }
+    });
+    
+    
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    var newid = options.id;
+    let item = JSON.parse(options.id);
+    // console.log(item);
     this.setData({
-      newid: options.id
+      detail:item 
     })
     // var that = this;
     // // 使用 Mock
@@ -32,15 +54,7 @@ Page({
     //     detail: res.data['doctor'][newid-1]
     //   })
     // });
-    wx.request({
-      url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
-      success: res => {
-        this.setData({
-          detail: res.data[newid]
-        })
-        // console.log(this.data.detail);
-      }
-    });
+
   },
 
 

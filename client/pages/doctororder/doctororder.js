@@ -16,9 +16,10 @@ Page({
   },
   introduce: function (event) {
     var newid = event.currentTarget.dataset.id;
+    let str = JSON.stringify(newid);
     // console.log(newid);
     wx.navigateTo({
-       url: '../introduces/introduces?id=' + newid
+       url: '../introduces/introduces?id=' + str
     })
   },
   /**

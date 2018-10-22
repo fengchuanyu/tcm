@@ -36,7 +36,6 @@ Page({
       openid: getApp().globalData.openid,
       user: getApp().globalData.user
     })
-    console.log(this.data.openid,this.data.user);
     wx.getSetting({
       success(res) {
         if (res.authSetting['scope.userInfo']) {

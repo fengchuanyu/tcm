@@ -40,17 +40,55 @@ Page({
     })
   },
   betrue:function(){
-    if(this.data.sign == "reg"){
-      wx.navigateTo({
-        url: '../dataorder/dataorder'
-      })
+    if (this.data.userName != '' && this.data.id != '' && this.data.phone != '' && this.data.firstPerson != '' && this.data.date != ''){
+      console.log(this.data.userName, this.data.id, this.data.phone, this.data.firstPerson, this.data.date);
+      wx.request({
+        url: 'https://us5qsybm.qcloud.la/infor/update_user',
+        data:{
+          uid: getApp().globalData.user.uid,
+          name:this.data.userName,
+          ID:this.data.id,
+          phone:this.data.phone,
+          sex:this.data.firstPerson,
+          bir:this.data.date
+        },
+        success: res => {
+          this.setData({
+            doctorlist: res.data.slice(0, 3),
+          })
+          // console.log(this.data.doctorlist);
+        }
+      });
+      if (this.data.sign == "reg") {
+        wx.navigateTo({
+          url: '../dataorder/dataorder'
+        })
+      }
+      else if (this.data.sign == "my") {
+        wx.switchTab({
+          url: '../my/my'
+        })
+      }
     }
-    else if(this.data.sign == "my"){
-      wx.switchTab({
-        url: '../my/my'
-      })
-    }
+    
+    
+  }, 
+  userNameInput: function (e) {
+    this.setData({
+      userName: e.detail.value
+    })
   },
+  idInput: function (e) {
+    this.setData({
+      id: e.detail.value
+    })
+  },
+  phoneInput: function (e) {
+    this.setData({
+      phone: e.detail.value
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -59,7 +97,21 @@ Page({
     this.setData({
       sign: s
     })
-    // console.log(this.data.sign);
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/select_user',
+      data: {
+        openid: getApp().globalData.openid
+      },
+      success: res => {
+        this.setData({
+          user: res.data[0],
+          firstPerson:res.data[0].user_sex,
+          date:res.data[0].user_birth
+        })
+        // console.log(this.data.user);
+
+      }
+    });
   },
 
   /**

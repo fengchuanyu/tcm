@@ -28,8 +28,9 @@ Page({
         url: 'https://us5qsybm.qcloud.la/infor/add_reg',
         data:{
           name:this.data.userName,
-          id:this.data.id,
+          ID:this.data.id,
           did: this.data.detail.did,
+          uid: getApp().globalData.user.uid,
           nowtime:time
         },
         success: res => {
@@ -60,8 +61,9 @@ Page({
   onLoad: function (options) {
 
     var newid = options.id;
+    let item = JSON.parse(options.id);
     this.setData({
-      newid: options.id
+      detail: item
     })
     // var that = this;
     // // 使用 Mock
@@ -71,15 +73,6 @@ Page({
     //     detail: res.data['doctor'][newid-1]
     //   })
     // });
-    wx.request({
-      url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
-      success: res => {
-        this.setData({
-          detail: res.data[newid]
-        })
-        // console.log(this.data.detail);
-      }
-    });
   },
 
   /**

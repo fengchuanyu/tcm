@@ -37,19 +37,34 @@ Page({
     });
   },
   notadd:function(){
-    console.log("notadd")
+    console.log("notadd");
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/delete_collect',
+      data: {
+        uid: getApp().globalData.user.uid,
+        aid: this.data.details.aid
+      },
+      success: res => {
+        this.setData({
+          doctorlist: res.data,
+        })
+        // console.log(this.data.doctorlist);
+      }
+    });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(options);
-    var newid = options.id;
+    let item = JSON.parse(options.id);
     this.setData({
-      newid: options.id,
+      details: item,
       isSave:options.isSave
     })
-    console.log(this.data.newid);
+    // console.log(this.data.details);
+    wx.setNavigationBarTitle({
+      title: this.data.details.article_title//页面标题为路由参数
+    })
     // console.log(this.data.newid);
     // var that = this;
     // // 使用 Mock
@@ -59,45 +74,6 @@ Page({
     //     details: res.data['article'][newid-1]
     //   })
     // });
-    wx.request({
-      url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
-      success: res => {
-        this.setData({
-          doctorlist: res.data,
-        })
-        // console.log(this.data.doctorlist);
-      }
-    });
-    wx.request({
-      url: 'https://us5qsybm.qcloud.la/infor/get_illnesslist',
-      success: res => {
-        this.setData({
-          illnesslist: res.data
-        })
-        // console.log(this.data.illnesslist);
-      }
-    })
-    wx.request({
-      url: 'https://us5qsybm.qcloud.la/infor/get_article',
-      success: res => {
-        this.setData({
-          details: res.data[newid]
-        })
-        // console.log(this.data.details);
-        wx.setNavigationBarTitle({
-          title: this.data.details.article_title//页面标题为路由参数
-        })
-      }
-    });
-    wx.request({
-      url: 'https://us5qsybm.qcloud.la/infor/get_article_only',
-      success: res => {
-        this.setData({
-          hah: res.data
-        })
-        console.log(this.data.hah)
-      }
-    });
 
   },
 

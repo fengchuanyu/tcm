@@ -53,9 +53,10 @@ Component({
     },
     doctor:function(event){
       var newid = event.currentTarget.dataset.id;
+      let str = JSON.stringify(newid);
       // console.log(newid);
       wx.navigateTo({
-        url: '../introduces/introduces?id=' + newid
+        url: '../introduces/introduces?id=' + str
       })
     },
     health: function () {
@@ -79,16 +80,30 @@ Component({
       })
     },
     appointment:function(){
-      console.log(this.data.user);
-      if(this.data.user_name){
-        wx.navigateTo({
-           url: '../dataorder/dataorder'
-        })
-      }else{
-        wx.navigateTo({
-          url: '../my_information/my_information?from=reg'
-        })
-      }
+      wx.request({
+        url: 'https://us5qsybm.qcloud.la/infor/select_user',
+        data: {
+          openid: getApp().globalData.openid
+        },
+        success: res => {
+          this.setData({
+            user: res.data[0]
+          })
+          //  console.log(this.data.user);
+          if (this.data.user.user_name) {
+            wx.navigateTo({
+              url: '../dataorder/dataorder'
+            })
+          } else {
+            wx.navigateTo({
+              url: '../my_information/my_information?from=reg'
+            })
+          }
+
+         
+        }
+      });
+      // console.log(this.data.user);
       
 
     },
@@ -159,7 +174,7 @@ Component({
                       that.setData({
                         user:res.data[0]
                       })
-                      app.globalData.user = that.data.user
+                      app.globalData.user = res.data[0]
                     }
                   }
                 });

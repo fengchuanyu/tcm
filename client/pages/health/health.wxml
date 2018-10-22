@@ -5,14 +5,14 @@
         <image class='searchImg' src='../../image/search.png'></image>
         <view class='searchBtn'>搜索</view>
     </view>
-    <view wx:for="{{infolist}}" wx:key="id" class="info-inf" bindtap='toDetail' data-id='{{index}}'>
+    <view wx:for="{{infolist}}" wx:key="id" class="info-inf" bindtap='toDetail' data-id='{{item}}'>
       <view class="article">
         <view class="article-main">
           <view class="article-header">
             <view class="article-main-title">{{item.article_title}}</view>
             <view class="article-main-writer">
-              <text>{{doctorlist[item.article_id-1].doctor_name}}</text>
-              <text>{{illnesslist[item.article_class-1].ill_title}}</text>
+              <text>{{item.doctor_name}}</text>
+              <text>{{item.ill_title}}</text>
             </view>
           </view>
           <view class="article-main-content" style="overflow:{{isshow}};display:{{isdisplay}};height:{{isheight}};">{{item.article_content}}

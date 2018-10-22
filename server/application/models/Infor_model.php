@@ -7,28 +7,23 @@ class Infor_model extends CI_Model {
     public function get_doctor_list()
     {
        return DB::select('doctor', ['*']);
-      // $sql="select * from article";
-			// $query=$this->db->query($sql);
-			// return $query->row();
     } 
     public function get_article_list()
     {
        return DB::select('article', ['*']);
     } 
-    public function get_article_only(){
+    public function get_article_ill(){
       $pdo = DB::getInstance(); 
-      // $query = $pdo->query("select * from article where article.aid = 2"); 
-      $query = $pdo->query("select * from article,doctor,ill-class where article.aid=2 and doctor.did = article.article_id and article.article_class = ill-class.iid") 
+      $query = $pdo->query("select * from article,illclass,doctor where illclass.iid = article.article_class and doctor.did = article.article_id"); 
       return $query->fetchAll(); 
-      // return DB::select('article', ['*']);
     }
     public function get_illnesslist_list()
     {
-       return DB::select('ill-class', ['*']);
+       return DB::select('illclass', ['*']);
     } 
-    public function add_reg_list($name,$id,$did,$time)
+    public function add_reg_list($name,$ID,$did,$uid,$time)
     {
-       return DB::insert('registration', ['r_uid' => $name, 'r_did' => $did, 'r_time' => $time, 'r_tag' =>1]); 
+       return DB::insert('registration', ['r_uid' => $uid, 'r_did' => $did, 'r_time' => $time, 'r_tag' =>1, 'r_name' => $name, 'r_numberID' => $ID]); 
     } 
     public function insert_user($id)
     {
@@ -41,4 +36,11 @@ class Infor_model extends CI_Model {
     {
        return DB::insert('collect',['collect_uid' => $uid, 'collect_aid' => $aid, 'collect_time' => $time]);
     } 
+     public function delete_collect($aid,$uid)
+    {
+       return DB::delete('collect',['collect_uid' => $uid, 'collect_aid' => $aid]);
+    } 
+    public function update_user($uid,$name,$ID,$phone,$bir,$sex){
+      return DB::update('users',['user_name' => $name, 'user_phone' => $phone, 'user_idnumber' => $ID, 'user_sex' => $sex, 'user_birth' => $bir],['uid' => $uid]);
+    }
 }

@@ -37,9 +37,12 @@ Page({
   toDetail: function (event) {
   
     var newid = event.currentTarget.dataset.id;
-    // console.log(newid);
+
+    let str = JSON.stringify(newid);
+    
+    // console.log(newid,str);
     wx.navigateTo({
-      url: '/pages/hdetail/hdetail?id=' + newid + '&isSave=' + false,
+      url: '/pages/hdetail/hdetail?id=' + str + '&isSave=' + false,
     })
 
   },
@@ -56,31 +59,22 @@ Page({
     //     infolist:res.data['article']
     //   })
     // });
+    // wx.request({
+    //   url: 'https://us5qsybm.qcloud.la/infor/get_article_only',
+    //   success: res => {
+    //     this.setData({
+    //       hah: res.data
+    //     })
+    //     console.log(this.data.hah)
+    //   }
+    // });
     wx.request({
-      url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
-      success: res => {
-        this.setData({
-          doctorlist: res.data.slice(0, 3),
-        })
-        console.log(this.data.doctorlist);
-      }
-    });
-    wx.request({
-      url: 'https://us5qsybm.qcloud.la/infor/get_illnesslist',
-      success: res => {
-        this.setData({
-          illnesslist: res.data
-        })
-        console.log(this.data.illnesslist);
-      }
-    })
-    wx.request({
-      url: 'https://us5qsybm.qcloud.la/infor/get_article',
+      url: 'https://us5qsybm.qcloud.la/infor/get_article_ill',
       success: res => {
         this.setData({
           infolist: res.data
         })
-        console.log(this.data.infolist);
+        // console.log(this.data.infolist)
       }
     });
   },
