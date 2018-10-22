@@ -28,5 +28,5 @@
                 <text space='ensp'>身份证号  </text><input type="text" style='display:inline-block' ></input>
             </view>
     </view>
-    <view><button class='btn'>确定</button></view>
+    <view><button class='btn' bindtap="betrue">确定</button></view>
 </view>

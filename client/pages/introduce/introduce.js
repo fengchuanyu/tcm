@@ -42,7 +42,7 @@ Page({
         url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
         success: res => {
           this.setData({
-            detail: res.data[newid-1]
+            detail: res.data[newid]
           })
           // console.log(this.data.detail);
         }

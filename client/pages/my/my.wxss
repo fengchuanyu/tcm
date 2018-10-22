@@ -19,14 +19,6 @@
   border: 1rpx #f8f8f8 solid;
   margin: 30rpx 30rpx 80rpx 30rpx;
 }
-.user-inf image{
-  height: 120rpx;
-  width: 120rpx;
-  border-radius: 50%;
-  margin-top: 15rpx;
-  /* overflow: hidden; */
-  /* float:left; */
-}
 .user-infname{
   float:left;
   height: 120rpx;
@@ -39,10 +31,16 @@
   height: 120rpx;
   font-weight: bold;
   line-height: 120rpx;
-
+  padding-left: 30rpx;
 }
 .infpost{
   height: 75rpx;
   line-height: 75rpx;
   font-size:30rpx;
+}
+.imgs{
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  margin-top: 15rpx;
 }

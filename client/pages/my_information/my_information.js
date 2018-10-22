@@ -39,11 +39,27 @@ Page({
       date: e.detail.value
     })
   },
+  betrue:function(){
+    if(this.data.sign == "reg"){
+      wx.navigateTo({
+        url: '../dataorder/dataorder'
+      })
+    }
+    else if(this.data.sign == "my"){
+      wx.switchTab({
+        url: '../my/my'
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var s = options.from;
+    this.setData({
+      sign: s
+    })
+    // console.log(this.data.sign);
   },
 
   /**

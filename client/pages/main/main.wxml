@@ -47,7 +47,7 @@
             {{item.name}}
         </text>
     </block>
-      <view class="doctor-inf-li" wx:for="{{doctorlist}}" wx:key="id" bindtap='doctor' data-id='{{item.did}}' wx:if='{{isbegin}}'>
+      <view class="doctor-inf-li" wx:for="{{doctorlist}}" wx:key="id" bindtap='doctor' data-id='{{index}}' wx:if='{{isbegin}}'>
         <image src="../../image/{{item.doctor_image}}" ></image>
         <view class='doctor-name'>{{item.doctor_name}}</view>
         <view class='doctor-post'>{{item.doctor_job}}</view>

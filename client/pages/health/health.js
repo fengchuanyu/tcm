@@ -47,14 +47,41 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    // 使用 Mock
-    API.ajax('', function (res) {
-      //这里既可以获取模拟的res
-      // console.log(res)
-      that.setData({
-        infolist:res.data['article']
-      })
+    // var that = this
+    // // 使用 Mock
+    // API.ajax('', function (res) {
+    //   //这里既可以获取模拟的res
+    //   // console.log(res)
+    //   that.setData({
+    //     infolist:res.data['article']
+    //   })
+    // });
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/get_doctor',
+      success: res => {
+        this.setData({
+          doctorlist: res.data.slice(0, 3),
+        })
+        console.log(this.data.doctorlist);
+      }
+    });
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/get_illnesslist',
+      success: res => {
+        this.setData({
+          illnesslist: res.data
+        })
+        console.log(this.data.illnesslist);
+      }
+    })
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/get_article',
+      success: res => {
+        this.setData({
+          infolist: res.data
+        })
+        console.log(this.data.infolist);
+      }
     });
   },
 

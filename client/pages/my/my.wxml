@@ -1,15 +1,19 @@
 <view class="total">
   <view class="title">
-    <view wx:if="{{postData}}" class="user-inf">
-        <image src="../../image/{{doctorlist[0].doctor_image}}"></image>
+    <view class="user-inf">
+    <view class="imgs">
+        <open-data type="userAvatarUrl" ></open-data>
         <view class='user-infname'>
-          <view class="infname">{{doctorlist[0].doctor_name}}</view>
+          <open-data type="userNickName" class="infname"></open-data>
         </view>
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"></button>
+    </view>
     </view>
   </view>
   <view class="body">
     <view class="body_one" bindtap='yuyue'>预约挂号</view>
     <view class="body_two"  bindtap='inf'>我的信息</view>
     <view class="body_three"  bindtap='store'>我的收藏</view>
+    
   </view>
 </view>

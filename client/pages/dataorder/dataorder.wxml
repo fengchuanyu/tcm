@@ -27,7 +27,7 @@
       </view>
     </view>
     <view class='doctor'>
-      <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf" bindtap="introduce" data-id='{{item.did}}'>
+      <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf" bindtap="introduce" data-id='{{index}}'>
         <image src="../../image/{{item.doctor_image}}"></image>
         <view class='doctor-infname'>
           <view class="infname">{{item.doctor_name}}</view>

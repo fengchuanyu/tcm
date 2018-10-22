@@ -2,10 +2,10 @@
 <scroll-view class='wrap'>
     <view class='moddle'>
         <image src="../../image/touxiang.png" class='img'></image>
-        <view class='name'>{{details.writer}}</view>
-        <view class='lebal'>{{details.atricle_class}}</view>
-        <button class='btn aa {{isSave=="true"? "save" : ""}}'>收藏</button>
-        <button class='btn bb {{isSave=="false"? "save" : ""}}'>取消收藏</button>
+        <view class='name'>{{doctorlist[details.article_id-1].doctor_name}}</view>
+        <view class='lebal'>{{illnesslist[details.article_class-1].ill_title}}</view>
+        <button class='btn aa {{isSave=="true"? "save" : ""}}' bindtap="add">收藏</button>
+        <button class='btn bb {{isSave=="false"? "save" : ""}}' bindtap='notadd'>取消收藏</button>
     </view>
     <view class='content'>
      {{details.article_content}}
