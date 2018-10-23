@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    ishave:"you"
   },
   add:function(){
     var nowdate = new Date();
@@ -32,6 +32,7 @@ Page({
         this.setData({
           doctorlist: res.data,
         })
+        this.onLoad();
         // console.log(this.data.doctorlist);
       }
     });
@@ -48,6 +49,7 @@ Page({
         this.setData({
           doctorlist: res.data,
         })
+        this.onLoad();
         // console.log(this.data.doctorlist);
       }
     });
@@ -56,15 +58,43 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let item = JSON.parse(options.id);
+    console.log(getApp().globalData.lin, getApp().globalData.isSave);
+    // let item = JSON.parse(options.id);
+    let item = getApp().globalData.lin
+    // this.setData({
+    //   details: item,
+    //   isSave:options.isSave
+    // })
     this.setData({
       details: item,
-      isSave:options.isSave
+      isSave: getApp().globalData.isSave
     })
     // console.log(this.data.details);
     wx.setNavigationBarTitle({
       title: this.data.details.article_title//页面标题为路由参数
     })
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/select_col',
+      data: {
+        uid: getApp().globalData.user.uid,
+        aid:item.aid
+      },
+      success: res => {
+        // console.log(res.data);
+        if(res.data.length == 0){
+            this.setData({
+              isSave: "false"
+            })
+          // console.log(this.data.isSave)
+        }
+        else{
+          this.setData({
+            isSave: "true"
+          })
+          // console.log(this.data.isSave)
+        }
+      }
+    });
     // console.log(this.data.newid);
     // var that = this;
     // // 使用 Mock
@@ -88,7 +118,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**

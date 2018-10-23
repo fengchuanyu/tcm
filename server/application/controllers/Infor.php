@@ -76,4 +76,29 @@ class Infor extends CI_Controller {
       $result = $this -> Infor_model -> update_user($uid,$name,$ID,$phone,$bir,$sex);
       echo json_encode($result);
     }
+    public function get_reg(){
+      $uid = $this->input->get('uid');
+      $this -> load -> model('Infor_model');
+      $result = $this -> Infor_model -> select_reg($uid);
+      echo json_encode($result);
+    }
+     public function get_col(){
+      $uid = $this->input->get('uid');
+      $this -> load -> model('Infor_model');
+      $result = $this -> Infor_model -> get_col($uid);
+      echo json_encode($result);
+    }
+    public function select_col(){
+      $uid = $this->input->get('uid');
+      $aid = $this->input->get('aid');
+      $this -> load -> model('Infor_model');
+      $result = $this -> Infor_model -> select_col($uid,$aid);
+      echo json_encode($result);
+    }
+    public function del_reg(){
+      $rid = $this->input->get('rid');
+      $this -> load -> model('Infor_model');
+      $result = $this -> Infor_model -> del_reg($rid);
+      echo json_encode($result);
+    }
 }

@@ -73,6 +73,9 @@
   top: 47%;
   right: 170rpx;
 }
+.no{
+  right: 40rpx;
+}
 .btn{
   height: 70rpx;
   width: 120rpx;

@@ -1,14 +1,14 @@
 <!--pages/my_store/my_store.wxml-->
 <view>
 <view class='info_one'>
-  <view wx:for="{{infolist}}" wx:key="id" class="info-inf" bindtap='hdetail' data-id='{{item.aid}}'>
+  <view wx:for="{{infolist}}" wx:key="id" class="info-inf" bindtap='hdetail' data-id='{{item}}'>
     <view class="article" >
       <view class="article-main">
         <view class="article-header">
           <view class="article-main-title">{{item.article_title}}</view>
           <view class="article-main-writer">
-            <text>{{item.writer}}</text>
-            <text>{{item.article_class}}</text>
+            <text>{{item.doctor_name}}</text>
+            <text>{{item.ill_title}}</text>
           </view>
         </view>
         <view class="article-main-content" style="overflow:{{isshow}};display:{{isdisplay}};height:{{isheight}};">{{item.article_content}}

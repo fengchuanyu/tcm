@@ -2,7 +2,7 @@
 <view>
     <view>
             <view class="info">
-                <text space='ensp'>姓名  </text><input type="text" style='display:inline-block' bindinput ="userNameInput" placeholder='{{user.user_name}}' placeholder-style=" color:#bfbfbf"></input>
+                <text space='ensp'>姓名  </text><input type="text" style='display:inline-block' bindinput ="userNameInput"  value='{{user.user_name}}'></input>
             </view>
             <view class="section info">  
   <picker mode="date" value="{{date}}" start="2016-09-26" end="2017-10-10" bindchange="listenerDatePickerSelected">
@@ -22,10 +22,10 @@
   </view>
             </view>
              <view class="info">
-                <text space='ensp'>电话号码  </text><input type="text" style='display:inline-block' bindinput="phoneInput" placeholder='{{user.user_phone}}' placeholder-style=" color:#bfbfbf"></input>
+                <text space='ensp'>电话号码  </text><input type="text" style='display:inline-block' bindinput="phoneInput" value='{{user.user_phone}} '></input>
             </view>
              <view class="info">
-                <text space='ensp'>身份证号  </text><input type="text" style='display:inline-block' bindinput="idInput" placeholder='{{user.user_idnumber}}' placeholder-style=" color:#bfbfbf"></input>
+                <text space='ensp'>身份证号  </text><input type="text" style='display:inline-block' bindinput="idInput"  value='{{user.user_idnumber}}'></input>
             </view>
     </view>
     <view><button class='btn' bindtap="betrue">确定</button></view>

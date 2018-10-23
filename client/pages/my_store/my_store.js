@@ -36,24 +36,40 @@ Page({
   },
   hdetail:function(event){
     var newid = event.currentTarget.dataset.id;
+    let str = JSON.stringify(newid);
+    getApp().globalData.lin = newid;
+    getApp().globalData.isSave = "true";
+    // console.log(str);
     wx.navigateTo({
-      url: '/pages/hdetail/hdetail?id=' + newid + '&isSave=' + true,
+      url: '/pages/hdetail/hdetail?id=' + str + '&isSave=' + true,
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    // 使用 Mock
-    API.ajax('', function (res) {
-      //这里既可以获取模拟的res
-      // console.log(res)
-      that.setData({
-        infolist: res.data['article'],
-        postData: true
-      })
-    })
+    // var that = this;
+    // // 使用 Mock
+    // API.ajax('', function (res) {
+    //   //这里既可以获取模拟的res
+    //   // console.log(res)
+    //   that.setData({
+    //     infolist: res.data['article'],
+    //     postData: true
+    //   })
+    // })
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/get_col',
+      data: {
+        uid: getApp().globalData.user.uid
+      },
+      success: res => {
+        this.setData({
+          infolist:res.data
+        })
+        // console.log(this.data.infolist);
+      }
+    });
   },
 
   /**
@@ -67,7 +83,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    this.onLoad();
   },
 
   /**

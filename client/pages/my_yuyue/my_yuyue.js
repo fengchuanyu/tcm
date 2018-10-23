@@ -31,21 +31,60 @@ Page({
       })
     }
   },
+  quxiao: function(event){
+    var newid = event.currentTarget.dataset.id;
+    // console.log(newid);
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/del_reg',
+      data:{
+        rid:newid
+      },
+      success: res => {
+        // console.log("this.data.doctorlist");
+        this.onLoad();
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    // 使用 Mock
-    API.ajax('', function (res) {
-      //这里既可以获取模拟的res
-      // console.log(res)
-      that.setData({
-        doctorlist: res.data['doctor'],
-        postData: true
-      })
-    })
-    // console.log(this.data.doctorlist[0].img)
+    // var that = this;
+    // // 使用 Mock
+    // API.ajax('', function (res) {
+    //   //这里既可以获取模拟的res
+    //   // console.log(res)
+    //   that.setData({
+    //     doctorlist: res.data['doctor'],
+    //     postData: true
+    //   })
+    // })
+    // // console.log(this.data.doctorlist[0].img)
+    wx.request({
+      url: 'https://us5qsybm.qcloud.la/infor/get_reg',
+      data:{
+        uid: getApp().globalData.user.uid
+      },
+      success: res => {
+        var listone = new Array();
+        var listtwo = new Array();
+        for(var i = 0 ; i < res.data.length ; i++){
+          if(res.data[i].r_tag == 1){
+            listone.push(res.data[i]);
+          }
+          else if (res.data[i].r_tag == 2){ 
+            listtwo.push(res.data[i]);
+          }
+        }
+        // console.log(this.data.flielist);
+        this.setData({
+          flieone: listone,
+          flietwo: listtwo
+        })
+        // console.log(this.data.flieone);
+        // console.log(this.data.flietwo);
+      }
+    });
   },
 
   /**
@@ -59,7 +98,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    
   },
 
   /**

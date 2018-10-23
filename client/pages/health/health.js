@@ -39,7 +39,8 @@ Page({
     var newid = event.currentTarget.dataset.id;
 
     let str = JSON.stringify(newid);
-    
+    getApp().globalData.lin = newid;
+    getApp().globalData.isSave = "false";
     // console.log(newid,str);
     wx.navigateTo({
       url: '/pages/hdetail/hdetail?id=' + str + '&isSave=' + false,
@@ -50,6 +51,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(getApp().globalData.user);
     // var that = this
     // // 使用 Mock
     // API.ajax('', function (res) {

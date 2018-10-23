@@ -43,4 +43,21 @@ class Infor_model extends CI_Model {
     public function update_user($uid,$name,$ID,$phone,$bir,$sex){
       return DB::update('users',['user_name' => $name, 'user_phone' => $phone, 'user_idnumber' => $ID, 'user_sex' => $sex, 'user_birth' => $bir],['uid' => $uid]);
     }
+    public function select_reg($uid){
+      $pdo = DB::getInstance(); 
+      $query = $pdo->query("select * from registration,doctor where registration.r_uid = $uid and registration.r_did = doctor.did"); 
+      return $query->fetchAll(); 
+    }
+    public function get_col($uid){
+      $pdo = DB::getInstance(); 
+      $query = $pdo->query("select * from collect,article,doctor,illclass where collect.collect_uid = $uid and collect.collect_aid = article.aid and doctor.did = article.article_id and illclass.iid = article.article_class"); 
+      return $query->fetchAll(); 
+    }
+    public function select_col($uid,$aid){
+      // return DB::select('collect',['*'],['collect_uid' => $uid, 'collect_aid' => $aid]);
+      return DB::select('collect', ['*'],['collect_uid' => $uid, 'collect_aid' => $aid]);
+    }
+    public function del_reg($rid){
+       return DB::delete('registration',['rid' => $rid]);
+    }
 }

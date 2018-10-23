@@ -11,7 +11,7 @@
 <swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
   <swiper-item>
    <view class='share-eg'>
-       <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf">
+       <view wx:for="{{flieone}}" wx:key="id" class="doctor-inf">
         <image src="../../image/{{item.doctor_image}}"></image>
         <view class='doctor-infname'>
           <view class="infname">{{item.doctor_name}}</view>
@@ -21,23 +21,23 @@
           <text class="doctor-time_one">2018-10-10</text>
           <text class='doctor-time_two'>上午</text>
         </view>
-        <button class='btn'>取消</button>
+        <button class='btn' bindtap="quxiao" data-id='{{item.rid}}'>取消</button>
       </view>
     </view>
   </swiper-item> 
   <swiper-item>
     <view class='share-eg'>
-     <view wx:for="{{doctorlist}}" wx:key="id" class="doctor-inf">
+     <view wx:for="{{flietwo}}" wx:key="id" class="doctor-inf">
         <image src="../../image/{{item.doctor_image}}"></image>
         <view class='doctor-infname'>
           <view class="infname">{{item.doctor_name}}</view>
           <view class="infpost">{{item.doctor_job}}</view>
         </view>
         <view >
-          <text class="doctor-time_one">2018-10-10</text>
-          <text class='doctor-time_two'>上午</text>
+          <text class="doctor-time_one no">2018-10-10</text>
+          <text class='doctor-time_two no'>上午</text>
         </view>
-        <button class='btn'>取消</button>
+        <!-- <button class='btn'>取消</button> -->
       </view>
     </view>
   </swiper-item>
