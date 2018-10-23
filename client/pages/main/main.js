@@ -158,7 +158,7 @@ Component({
                      openid:id
                    },
                   success: res => {
-                    if(!res.data){
+                    if(res.data.length == 0){
                       console.log('wu')
                       wx.request({
                         url: 'https://us5qsybm.qcloud.la/infor/insert_user',

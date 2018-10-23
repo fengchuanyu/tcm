@@ -6,9 +6,9 @@ Page({
    */
   data: {
     selectPerson: true,
-    firstPerson: '男',
+    firstPerson: '女',
     selectArea: false,
-    date: ''
+    date: undefined
   },
   clickPerson: function () {
     var selectPerson = this.data.selectPerson;
@@ -40,8 +40,10 @@ Page({
     })
   },
   betrue:function(){
-    if (this.data.userName != '' && this.data.id != '' && this.data.phone != '' && this.data.firstPerson != '' && this.data.date != ''){
-      console.log(this.data.userName, this.data.id, this.data.phone, this.data.firstPerson, this.data.date);
+    // console.log(this.data.userName, this.data.id, this.data.phone, this.data.firstPerson, this.data.date);
+    if (this.data.userName != undefined && this.data.id != undefined && this.data.phone != undefined && this.data.firstPerson != undefined && this.data.date != undefined && this.data.userName != '' && this.data.id != '' && this.data.phone != '' && this.data.firstPerson != '' && this.data.date != ''){
+      // console.log('11')
+      // console.log(this.data.userName, this.data.id, this.data.phone, this.data.firstPerson, this.data.date);
       wx.request({
         url: 'https://us5qsybm.qcloud.la/infor/update_user',
         data:{
@@ -53,22 +55,19 @@ Page({
           bir:this.data.date
         },
         success: res => {
-          this.setData({
-            doctorlist: res.data.slice(0, 3),
-          })
-          // console.log(this.data.doctorlist);
+          if (this.data.sign == "reg") {
+            wx.navigateTo({
+              url: '../dataorder/dataorder'
+            })
+          }
+          else if (this.data.sign == "my") {
+            wx.switchTab({
+              url: '../my/my'
+            })
+          }
         }
       });
-      if (this.data.sign == "reg") {
-        wx.navigateTo({
-          url: '../dataorder/dataorder'
-        })
-      }
-      else if (this.data.sign == "my") {
-        wx.switchTab({
-          url: '../my/my'
-        })
-      }
+      
     }
     
     
@@ -103,6 +102,12 @@ Page({
         openid: getApp().globalData.openid
       },
       success: res => {
+        // if (!res.data[0].user_birth){
+        //   this.setData({
+        //     data:''
+        //   })
+        // }
+        // if()
         this.setData({
           user: res.data[0],
           firstPerson:res.data[0].user_sex,

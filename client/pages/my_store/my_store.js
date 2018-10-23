@@ -11,7 +11,8 @@ Page({
     isdisplay: "-webkit-box",
     isheight: "220rpx",
     howshow: "显示全部",
-    showtime: true
+    showtime: true,
+    ishave:false
   },
   showall: function () {
     if (this.data.showtime) {
@@ -67,6 +68,11 @@ Page({
         this.setData({
           infolist:res.data
         })
+        if(res.data.length == 0){
+          this.setData({
+            ishave: true
+          })
+        }
         // console.log(this.data.infolist);
       }
     });

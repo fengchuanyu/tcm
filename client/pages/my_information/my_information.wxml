@@ -2,7 +2,7 @@
 <view>
     <view>
             <view class="info">
-                <text space='ensp'>姓名  </text><input type="text" style='display:inline-block' bindinput ="userNameInput"  value='{{user.user_name}}'></input>
+                <text space='ensp'>姓名  </text><input type="text" style='display:inline-block' bindinput ="userNameInput"  value='{{user.user_name}}' ></input>
             </view>
             <view class="section info">  
   <picker mode="date" value="{{date}}" start="2016-09-26" end="2017-10-10" bindchange="listenerDatePickerSelected">

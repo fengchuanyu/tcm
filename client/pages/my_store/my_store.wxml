@@ -1,6 +1,7 @@
 <!--pages/my_store/my_store.wxml-->
 <view>
 <view class='info_one'>
+  <text wx:if='{{ishave}}'></text>
   <view wx:for="{{infolist}}" wx:key="id" class="info-inf" bindtap='hdetail' data-id='{{item}}'>
     <view class="article" >
       <view class="article-main">
