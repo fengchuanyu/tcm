@@ -20,7 +20,7 @@
 }
 .info input{
   position: relative;
-  top: 15rpx;
+  top: 0rpx;
 }
 
 

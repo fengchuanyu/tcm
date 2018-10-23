@@ -36,7 +36,7 @@ Page({
         this.setData({
           illnesslist: res.data
         })
-        console.log(this.data.illnesslist);
+        // console.log(this.data.illnesslist);
       }
     })
     

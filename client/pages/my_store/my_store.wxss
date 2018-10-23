@@ -1,5 +1,9 @@
 /* pages/my_store/my_store.wxss */
-
+.wuwu{
+  text-align: center;
+  font-size: 30rpx;
+  color: #fed5d5;
+}
 .article-main{
   padding:10rpx 30rpx;
   overflow: hidden;

@@ -34,10 +34,10 @@ Page({
           nowtime:time
         },
         success: res => {
-          console.log(res.data);
+          // console.log(res.data);
         }
       });
-      console.log(this.data.id + this.data.userName);
+      // console.log(this.data.id + this.data.userName);
       wx.navigateTo({
         url: '../regtrue/regtrue'
       })

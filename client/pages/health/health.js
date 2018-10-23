@@ -51,7 +51,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(getApp().globalData.user);
+    // console.log(getApp().globalData.user);
     // var that = this
     // // 使用 Mock
     // API.ajax('', function (res) {

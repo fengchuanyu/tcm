@@ -8,7 +8,10 @@ Page({
     selectPerson: true,
     firstPerson: '女',
     selectArea: false,
-    date: undefined
+    userName:'',
+    phone:'',
+    id:'',
+    date: ''
   },
   clickPerson: function () {
     var selectPerson = this.data.selectPerson;
@@ -43,6 +46,7 @@ Page({
     // console.log(this.data.userName, this.data.id, this.data.phone, this.data.firstPerson, this.data.date);
     if (this.data.userName != undefined && this.data.id != undefined && this.data.phone != undefined && this.data.firstPerson != undefined && this.data.date != undefined && this.data.userName != '' && this.data.id != '' && this.data.phone != '' && this.data.firstPerson != '' && this.data.date != ''){
       // console.log('11')
+      // console.log(getApp().globalData.user.uid);
       // console.log(this.data.userName, this.data.id, this.data.phone, this.data.firstPerson, this.data.date);
       wx.request({
         url: 'https://us5qsybm.qcloud.la/infor/update_user',
@@ -102,21 +106,30 @@ Page({
         openid: getApp().globalData.openid
       },
       success: res => {
-        // if (!res.data[0].user_birth){
-        //   this.setData({
-        //     data:''
-        //   })
-        // }
-        // if()
+        if(res.data[0].user_sex != null){
+          this.setData({
+            firstPerson: res.data[0].user_sex
+          })
+        }
+        if(res.data[0].user_birth != null){
+          this.setData({
+            date: res.data[0].user_birth
+          })
+        }
+        if(res.data[0].user_phone != null){
+          this.setData({
+            phone: res.data[0].user_phone
+          })
+        }
         this.setData({
           user: res.data[0],
-          firstPerson:res.data[0].user_sex,
-          date:res.data[0].user_birth
+          userName: res.data[0].user_name,
+          id: res.data[0].user_idnumber
         })
         // console.log(this.data.user);
-
       }
     });
+
   },
 
   /**

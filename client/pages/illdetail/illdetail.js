@@ -21,7 +21,7 @@ Page({
         this.setData({
           details: res.data[that.data.newid]
         })
-        console.log(this.data.details);
+        // console.log(this.data.details);
       }
     })
     // 使用 Mock
